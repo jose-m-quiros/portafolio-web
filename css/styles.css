@@ -588,25 +588,25 @@ img {
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
   .about-image img {
-      max-width: 250px;  /* Puedes ajustar este valor según lo necesites */
-      margin: 0 auto;
-      display: block;
+    max-width: 180px; /* Reducido significativamente */
+    margin: 0 auto;
+    display: block;
   }
-  
+
   .about-image {
-      max-width: 250px;
-      margin: 0 auto;
+    max-width: 180px;
+    margin: 0 auto;
   }
 }
 
 /* Para pantallas aún más pequeñas */
 @media (max-width: 480px) {
   .about-image img {
-      max-width: 200px;  /* Tamaño más pequeño para móviles muy pequeños */
+    max-width: 150px; /* Tamaño mucho más pequeño para móviles */
   }
-  
+
   .about-image {
-      max-width: 200px;
+    max-width: 150px;
   }
 }
 
@@ -2132,6 +2132,24 @@ img {
   html {
     font-size: 85%;
   }
+  .about-image img {
+    max-width: 180px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .about-image::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    width: 100%;
+    height: 108%;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    z-index: -1;
+    animation: borderPulse 4s infinite alternate ease-in-out;
+  }
 
   .hero h1 {
     font-size: 3.5rem;
@@ -2150,7 +2168,7 @@ img {
   }
 
   .about-image img {
-    max-width: 100%;
+    max-width: 70%;
   }
 
   .timeline::before {
