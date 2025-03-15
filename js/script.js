@@ -253,3 +253,30 @@ ${mensaje}
   cerrarModal();
   limpiarFormulario(); // Limpiar el formulario después de enviar
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const accessButton = document.querySelector('.btn.btn-sm');
+  
+  if (accessButton) {
+      accessButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // Configuración del correo
+          const emailAddress = 'jqchaves1928@gmail.com'; // Cambia esto a tu dirección de correo
+          const subject = 'Solicitud de acceso al repositorio API C# SQL Server';
+          const body = 'Me gustaría solicitar acceso al repositorio de la API REST de autenticación desarrollada en C# con SQL Server.\n\n' +
+                      'Información de contacto:\n' +
+                      'Nombre: \n' +
+                      'Empresa/Persona: \n' +
+                      'Motivo de la solicitud: \n\n' +
+                      'Gracias por su atención.';
+          
+          // Crear URL mailto
+          const mailtoUrl = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          
+          // Abrir cliente de correo del usuario
+          window.location.href = mailtoUrl;
+      });
+  }
+});
