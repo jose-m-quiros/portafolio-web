@@ -2250,12 +2250,22 @@ img {
   }
 
   .nav-links.active {
-    height: calc(100vh - var(--navbar-height));
-    padding: 2rem 0;
-    transform: translateY(0);
+    display: flex; /* o block dependiendo de tu diseño */
     opacity: 1;
-    overflow-y: auto;
-    gap: 2rem;
+    visibility: visible;
+    /* otros estilos para el menú activo */
+  }
+  
+  .burger.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .burger.active div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .burger.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 
   .nav-links a {
