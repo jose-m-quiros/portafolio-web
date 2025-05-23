@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio Profesional - José M. Quirós</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/menu-mobile.css">
     <link rel="icon" href="img/logojm.png" type="image/x-icon">
     <link rel="icon" href="img/logojm.png" type="image/png">
     <link rel="apple-touch-icon" href="img/logojm.png">
@@ -16,13 +15,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
-    <!-- Preloader -->
-    <div class="page-loader">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <div class="loader-text">Cargando...</div>
-        </div>
-    </div>
 
     <!-- Indicador de Scroll -->
     <div class="scroll-indicator">
@@ -33,20 +25,21 @@
         <div class="container">
             <div class="logo">PORTAFOLIO</div>
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contact-form">Contacto</a></li>
+                <li class="nav-separacion"><a href="#inicio">Inicio</a></li>
+                <li class="nav-separacion"><a href="#sobre-mi">Sobre Mí</a></li>
+                <li class="nav-separacion"><a href="#habilidades">Habilidades</a></li>
+                <li class="nav-separacion"><a href="#experiencia">Experiencia</a></li>
+                <li class="nav-separacion"><a href="#proyectos">Proyectos</a></li>
+                <li class="nav-separacion"><a href="#contacto">Contacto</a></li>
             </ul>
             <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </nav>
+
 
     <section id="inicio" class="hero">
         <div class="container">
@@ -381,12 +374,6 @@
     <section id="proyectos" class="projects">
         <div class="container">
             <h2 class="section-title">Proyectos Destacados</h2>
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="api">API</button>
-                <button class="filter-btn" data-filter="automation">Automatización</button>
-            </div>
             <div class="projects-grid">
                 <div class="project-item" data-category="api">
                     <div class="project-img">
@@ -525,7 +512,7 @@
             </div>
         </div>
     </div>
-
+    
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 JOSE M QUIROS. Todos los derechos reservados.</p>
@@ -535,10 +522,5 @@
     <script src="js/script.js"></script>
     <script src="js/animacion.js"></script>
     
-    <!-- Script de efectos modernos -->
-    <script>
-        // Aquí va el JavaScript complementario que creamos anteriormente
-        // O puedes guardarlo en un archivo separado como js/efectos-modernos.js
-    </script>
 </body>
 </html>
