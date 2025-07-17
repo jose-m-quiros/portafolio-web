@@ -1,525 +1,1429 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
+    <!-- Meta Tags Básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio Profesional - José M. Quirós</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO y Metadatos -->
+    <title>Jose M Quiros | Estudiante de Ingenieria en Seguridad Informatica & Desarrollador Full Stack</title>
+    <meta name="description" content="Jose M Quiros - Especialista en ciberseguridad, desarrollo web full stack y automatización. Fundador de SPIKEDTECH. Transformo ideas en soluciones digitales seguras.">
+    <meta name="keywords" content="Jose Quiros, Seguridad Informatica, Desarrollador Full Stack, Ciberseguridad, API REST, SPIKEDTECH, Costa Rica">
+    <meta name="author" content="Jose M Quiros">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://jmquiros.dev">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Jose M Quiros | Estudiante de Ingenieria en Seguridad Informatica & Desarrollador Full Stack">
+    <meta property="og:description" content="Especialista en ciberseguridad, desarrollo web y automatización. Transformo ideas en soluciones digitales seguras y escalables.">
+    <meta property="og:image" content="https://jmquiros.dev/img/profile.jpg">
+    <meta property="og:url" content="https://jmquiros.dev">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jose M Quiros | Estudiante de Ingenieria en Seguridad Informatica">
+    <meta name="twitter:description" content="Especialista en ciberseguridad y desarrollo web full stack">
+    <meta name="twitter:image" content="https://jmquiros.dev/img/profile.jpg">
+    
+    <!-- Theme & Colors -->
+    <meta name="theme-color" content="#082f49" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#0ea5e9" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light">
+    
+    <!-- Performance Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="img/logojm.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logojm.png">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="img/logojm.png" type="image/x-icon">
-    <link rel="icon" href="img/logojm.png" type="image/png">
-    <link rel="apple-touch-icon" href="img/logojm.png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap">
+    </noscript>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+    </noscript>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jose M Quiros",
+        "jobTitle": "Estudiante de Ingenieria en Seguridad Informatica",
+        "description": "Especialista en ciberseguridad, desarrollo web full stack y automatización",
+        "email": "spikedtech19@gmail.com",
+        "telephone": "+506-8739-4231",
+        "url": "https://jmquiros.dev",
+        "image": "https://jmquiros.dev/img/profile.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "CR",
+            "addressLocality": "Costa Rica"
+        },
+        "worksFor": {
+            "@type": "Organization",
+            "name": "SPIKEDTECH",
+            "url": "http://spikedtech-official.vercel.app/"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/jmquiros19",
+            "https://github.com/jose-m-quiros",
+            "https://www.facebook.com/jmquiros19",
+            "https://www.instagram.com/jm_quiros19/"
+        ]
+    }
+    </script>
 </head>
-<body>
 
-    <!-- Indicador de Scroll -->
-    <div class="scroll-indicator">
-        <div class="scroll-progress"></div>
+<body>
+    <!-- Skip Links para Accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#navigation" class="skip-link">Saltar a la navegación</a>
+
+    <!-- Page Loader -->
+    <div id="pageLoader" class="page-loader" aria-hidden="true" style="display: none;">
+        <div class="loader-content">
+            <div class="loader-logo">JM</div>
+            <div class="loader-text">Cargando portfolio...</div>
+            <div class="loader-progress">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
     </div>
 
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">PORTAFOLIO</div>
-            <ul class="nav-links">
-                <li class="nav-separacion"><a href="#inicio">Inicio</a></li>
-                <li class="nav-separacion"><a href="#sobre-mi">Sobre Mí</a></li>
-                <li class="nav-separacion"><a href="#habilidades">Habilidades</a></li>
-                <li class="nav-separacion"><a href="#experiencia">Experiencia</a></li>
-                <li class="nav-separacion"><a href="#proyectos">Proyectos</a></li>
-                <li class="nav-separacion"><a href="#redes">Contacto</a></li>
-            </ul>
-            <div class="burger">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </nav>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" role="progressbar" aria-label="Progreso de scroll" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="scroll-progress-bar"></div>
+    </div>
 
-
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content fade-in">
-                <h1>Hola, soy <span class="highlight">JOSE QUIROS</span></h1>
-                <h2 class="typewriter">Ingeniero en Seguridad Informática | Desarrollador Web</h2>
-                <p>Soy un apasionado por la tecnología, la ciberseguridad y el desarrollo web. Me especializo en soluciones TI, seguridad informática y automatización. Actualmente, curso Ingeniería en Seguridad Informática y lidero SPIKEDTECH, mi emprendimiento de soporte técnico y desarrollo.</p>
-                <div class="cta-buttons">
-                    <a href="assets/documents/CV.pdf" class="btn btn-primary magnetic-btn" download>Descargar CV</a>
-                    <a href="#proyectos" class="btn btn-secondary magnetic-btn">Ver Proyectos</a>
-                    <a href="#contact-form" class="btn btn-neon">Contactar</a>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav id="navigation" class="navbar" role="navigation" aria-label="Navegación principal">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="#inicio" class="logo" aria-label="Jose M Quiros - Ir al inicio">
+                        <div class="logo-text">JM</div>
+                        <div class="logo-info">
+                            <span class="logo-name">Jose M Quiros</span>
+                            <span class="logo-title">Security Engineer Student</span>
+                        </div>
+                    </a>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="sobre-mi" class="about">
-        <div class="container">
-            <h2 class="section-title" data-text="SOBRE MÍ">Sobre <span>Mí</span></h2>
-            <div class="about-content">
-                <div class="about-image slide-in-left color-shift">
-                    <img src="img/20250311_155131.jpg" alt="José M. Quirós">
-                </div>
-                <div class="about-text slide-in-right">
-                    <p class="fade-in">Soy un profesional en tecnologías de la información con experiencia en ciberseguridad, desarrollo web y soporte técnico. Me apasiona aprender continuamente y ofrecer soluciones eficientes a problemas tecnológicos.</p>
-                    
-                    <h3 class="fade-in">Habilidades Clave</h3>
-                    <div class="key-skills fade-in">
-                        <span>Rápido aprendizaje</span>
-                        <span>Resolución de problemas</span>
-                        <span>Comunicación efectiva</span>
-                        <span>Trabajo en equipo</span>
-                        <span>Adaptabilidad</span>
-                    </div>
-                    
-                    <h3 class="fade-in">Certificaciones y Cursos</h3>
-                    <ul class="certifications fade-in">
-                        <li>Cybersecurity and Data - IBM - 2025</li>
-                        <li>Fundamentos de ciberseguridad - IBM - 2025</li>
-                        <li>Hacker ético - CISCO - 2025</li>
-                    </ul>
-                    
-                    <div class="about-details glass-card fade-in">
-                        <div class="detail">
-                            <span class="detail-title">Empresa:</span>
-                            <span class="detail-info">SPIKEDTECH</span>
-                        </div>
-                        <div class="detail">
-                            <span class="detail-title">Email:</span>
-                            <span class="detail-info">spikedtech19@gmail.com</span>
-                        </div>
-                        <div class="detail">
-                            <span class="detail-title">Idiomas:</span>
-                            <span class="detail-info">Español (Nativo), Inglés (Intermedio)</span>
-                        </div>
-                        <div class="detail">
-                            <span class="detail-title">Disponibilidad:</span>
-                            <span class="detail-info">Disponible para proyectos</span>
-                        </div>
-                    </div>
-                    
-                    <a href="assets/documents/CV.pdf" class="btn btn-primary magnetic-btn fade-in" download>Descargar CV</a>
+                <ul class="nav-links" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a href="#inicio" class="nav-link active" role="menuitem">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#sobre-mi" class="nav-link" role="menuitem">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            <span>Sobre Mi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#habilidades" class="nav-link" role="menuitem">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                            <span>Habilidades</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#experiencia" class="nav-link" role="menuitem">
+                            <i class="fas fa-briefcase" aria-hidden="true"></i>
+                            <span>Experiencia</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#proyectos" class="nav-link" role="menuitem">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                            <span>Proyectos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a href="#contacto" class="nav-link" role="menuitem">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="navbar-controls">
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar entre modo oscuro y claro">
+                        <i class="fas fa-moon theme-icon-dark" aria-hidden="true"></i>
+                        <i class="fas fa-sun theme-icon-light" aria-hidden="true"></i>
+                    </button>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobileMenuToggle" class="burger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-links">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <section id="habilidades" class="skills">
-        <div class="container">
-            <h2 class="section-title" data-text="HABILIDADES">Mis Habilidades <span>Técnicas</span></h2>
-            <div class="skills-content">
-                
-                <div class="skill-category fade-in">
-                    <h3>Desarrollo Web</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <h4>HTML5</h4>
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main">
+        
+        <!-- Hero Section -->
+        <section id="inicio" class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-greeting">
+                            <span class="greeting-emoji">👋</span>
+                            <span>Hola, soy</span>
                         </div>
                         
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <h4>CSS3</h4>
+                        <h1 id="hero-title" class="hero-title">
+                            <span class="title-line">Jose M</span>
+                            <span class="title-line title-highlight">Quiros</span>
+                        </h1>
+                        
+                        <div class="hero-subtitle">
+                            <span class="subtitle-prefix">Soy</span>
+                            <span class="typewriter" id="typewriter">Estudiante de Ingenieria en Seguridad Informatica</span>
                         </div>
                         
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fab fa-js"></i>
+                        <p class="hero-description">
+                            Transformo ideas en <strong>soluciones digitales seguras</strong>. 
+                            Me especializo en ciberseguridad, desarrollo web full stack 
+                            y automatización de procesos.
+                        </p>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="3">1</span>
+                                <span class="stat-label">Años Experiencia</span>
                             </div>
-                            <h4>JavaScript</h4>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="50">3</span>
+                                <span class="stat-label">Proyectos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-count="5">+15</span>
+                                <span class="stat-label">Certificaciones</span>
+                            </div>
                         </div>
                         
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fab fa-react"></i>
-                            </div>
-                            <h4>React</h4>
+                        <div class="hero-actions">
+                            <a href="#contacto" class="btn btn-primary">
+                                <i class="fas fa-envelope"></i>
+                                <span>Contactar</span>
+                            </a>
+                            <a href="assets/documents/CV.pdf" class="btn btn-outline" download>
+                                <i class="fas fa-download"></i>
+                                <span>Descargar CV</span>
+                            </a>
                         </div>
                         
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fab fa-node-js"></i>
-                            </div>
-                            <h4>Node.js</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category fade-in">
-                    <h3>Lenguajes de Programación</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <h4>C#</h4>
-                        </div>
-                        
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fas fa-window-restore"></i>
-                            </div>
-                            <h4>.NET</h4>
-                        </div>
-                        
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <h4>Python</h4>
-                        </div>
-                        
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fab fa-java"></i>
-                            </div>
-                            <h4>Java</h4>
-                        </div>
-                        
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fab fa-php"></i>
-                            </div>
-                            <h4>PHP</h4>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill-category fade-in">
-                    <h3>Ciberseguridad</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
+                        <div class="floating-icons">
+                            <div class="floating-icon" data-tech="security">
                                 <i class="fas fa-shield-alt"></i>
                             </div>
-                            <h4>Análisis de riesgos</h4>
-                        </div>
-                        
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fas fa-exclamation-triangle"></i>
+                            <div class="floating-icon" data-tech="automation">
+                                <i class="fas fa-cogs"></i>
                             </div>
-                            <h4>Gestión de incidentes</h4>
-                            </div>
-                        
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fas fa-lock"></i>
-                            </div>
-                            <h4>Seguridad Web</h4>
-                        </div>
-                        
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fas fa-search"></i>
-                            </div>
-                            <h4>Auditorías de seguridad</h4>
                         </div>
                     </div>
                 </div>
                 
-                <div class="skill-category fade-in">
-                    <h3>Bases de Datos</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fas fa-server"></i>
+                <div class="scroll-hint">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <span>Scroll para explorar</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre-mi" class="about" aria-labelledby="about-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="about-title" class="section-title" data-text="ABOUT">
+                        Sobre <span class="highlight">Mi</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Conoce mi historia y pasión por la tecnología
+                    </p>
+                </header>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <div class="about-image-container">
+                            <img src="img/20250311_155131.jpg" alt="Jose M Quiros trabajando" width="400" height="500" loading="lazy">
+                            <div class="image-decorations">
+                                <div class="decoration decoration-1"></div>
+                                <div class="decoration decoration-2"></div>
                             </div>
-                            <h4>SQL Server</h4>
                         </div>
                         
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <h4>MySQL</h4>
-                        </div>
-                        
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fas fa-sitemap"></i>
-                            </div>
-                            <h4>MongoDB</h4>
+                        <div class="quick-facts">
+                            <h3>Datos Rápidos</h3>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Costa Rica</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Ing. Seguridad Informatica</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Fundador SPIKEDTECH</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-heart"></i>
+                                    <span>Apasionado por la Tech</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                
-                <div class="skill-category fade-in">
-                    <h3>Metodologías y Herramientas</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fas fa-code-branch"></i>
-                            </div>
-                            <h4>Scrum</h4>
+                    
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <p class="about-description">
+                                Soy un profesional apasionado por la <strong>seguridad informatica</strong> y el 
+                                <strong>desarrollo web full stack</strong>, con una visión clara: crear tecnología 
+                                que no solo funcione, sino que también proteja y empodere a las personas.
+                            </p>
+                            
+                            <p class="about-mission">
+                                Mi misión es construir soluciones digitales robustas y seguras, combinando 
+                                creatividad técnica con las mejores prácticas de ciberseguridad.
+                            </p>
                         </div>
                         
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fas fa-sync-alt"></i>
+                        <div class="core-values">
+                            <h3>Mis Valores</h3>
+                            <div class="values-grid">
+                                <div class="value-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <h4>Seguridad Primero</h4>
+                                    <p>La seguridad es el fundamento de cada línea de código.</p>
+                                </div>
+                                <div class="value-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <h4>Innovación</h4>
+                                    <p>Buscando siempre nuevas formas de resolver problemas.</p>
+                                </div>
+                                <div class="value-item">
+                                    <i class="fas fa-users"></i>
+                                    <h4>Colaboración</h4>
+                                    <p>Los mejores resultados nacen del trabajo en equipo.</p>
+                                </div>
+                                <div class="value-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <h4>Crecimiento</h4>
+                                    <p>El aprendizaje nunca termina en tecnología.</p>
+                                </div>
                             </div>
-                            <h4>Agile</h4>
                         </div>
                         
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fas fa-infinity"></i>
+                        <div class="certifications">
+                            <h3>Certificaciones</h3>
+                            <div class="certifications-list">
+                                <div class="cert-item">
+                                    <div class="cert-icon">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                    </div>
+                                    <div class="cert-info">
+                                        <h4>Cybersecurity and Data</h4>
+                                        <p>IBM - 2025</p>
+                                    </div>
+                                </div>
+                                <div class="cert-item">
+                                    <div class="cert-icon">
+                                       <i class="fa-solid fa-shield-virus"></i>
+                                    </div>
+                                    <div class="cert-info">
+                                        <h4>Fundamentos de Ciberseguridad</h4>
+                                        <p>IBM - 2025</p>
+                                    </div>
+                                </div>
+                                <div class="cert-item">
+                                    <div class="cert-icon">
+                                        <i class="fas fa-certificate"></i>
+                                    </div>
+                                    <div class="cert-info">
+                                        <h4>Hacker Ético</h4>
+                                        <p>CISCO - 2025</p>
+                                    </div>
+                                </div>
                             </div>
-                            <h4>DevOps</h4>
                         </div>
                         
-                        <div class="skill-item card-3d">
-                            <div class="skill-icon">
-                                <i class="fab fa-git-alt"></i>
+                        <div class="personal-details">
+                            <div class="detail-grid">
+                                <div class="detail-item">
+                                    <span class="detail-label">Email</span>
+                                    <span class="detail-value">spikedtech19@gmail.com</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Teléfono</span>
+                                    <span class="detail-value">+506 8739-4231</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Ubicación</span>
+                                    <span class="detail-value">Costa Rica</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Estado</span>
+                                    <span class="detail-value">
+                                        <span class="status-indicator"></span>
+                                        Disponible
+                                    </span>
+                                </div>
                             </div>
-                            <h4>Git</h4>
+                        </div>
+                        
+                        <div class="about-actions">
+                            <a href="assets/documents/CV.pdf" class="btn btn-primary" download>
+                                <i class="fas fa-download"></i>
+                                <span>Descargar CV</span>
+                            </a>
+                            <a href="#contacto" class="btn btn-outline">
+                                <i class="fas fa-envelope"></i>
+                                <span>Contactar</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="experiencia" class="experience">
-        <div class="container">
-            <h2 class="section-title" data-text="EXPERIENCIA">Experiencia <span>Profesional</span></h2>
-            <div class="timeline">
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">13/01/2025 - Actualidad</div>
-                    <div class="timeline-content glass-card">
-                        <h3>NETCOM - AYA</h3>
-                        <h4>Agente Telefónico</h4>
-                        <p>Encargado de atención al cliente y soporte técnico vía telefónica.</p>
-                        <ul class="timeline-list">
-                            <li>Atención y resolución de consultas de usuarios</li>
-                            <li>Soporte técnico en primera línea</li>
-                            <li>Cobertura de personal en diferentes sedes cuando es requerido</li>
-                            <li>Asistencia en procesos operativos de la empresa</li>
-                        </ul>
-                    </div>
-                </div>
+        <!-- Skills Section -->
+        <section id="habilidades" class="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="skills-title" class="section-title" data-text="SKILLS">
+                        Mis <span class="highlight">Habilidades</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Tecnologías y herramientas que domino para crear soluciones innovadoras
+                    </p>
+                </header>
                 
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">20/02/2022 - Actualidad</div>
-                    <div class="timeline-content glass-card">
-                        <h3>SPIKEDTECH</h3>
-                        <h4>Fundador</h4>
-                        <p>Fundador de SPIKEDTECH, empresa de soporte técnico, mantenimiento, redes y desarrollo web.</p>
-                        <ul class="timeline-list">
-                            <li>Instalación y mantenimiento de redes</li>
-                            <li>Soporte en impresoras y dispositivos IoT</li>
-                            <li>Seguridad informática y auditorías</li>
-                            <li>Desarrollo de software y automatización</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Octubre 2024 - Diciembre 2024</div>
-                    <div class="timeline-content glass-card">
-                        <h3>Asamblea Legislativa</h3>
-                        <h4>Técnico de Soporte TI</h4>
-                        <p>Cargo en el Departamento de Tecnología.</p>
-                        <ul class="timeline-list">
-                            <li>Diagnóstico y resolución de problemas en hardware y software</li>
-                            <li>Configuración y mantenimiento de equipos informáticos</li>
-                            <li>Asistencia a usuarios en el uso de sistemas internos</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Agosto 2023</div>
-                    <div class="timeline-content glass-card">
-                        <h3>Municipalidad de Atenas</h3>
-                        <h4>Técnico de Soporte TI</h4>
-                        <p>Cargo en el Departamento de Tecnología y Comunicación.</p>
-                        <ul class="timeline-list">
-                            <li>Soporte en redes y conectividad</li>
-                            <li>Mantenimiento y configuración de equipos</li>
-                            <li>Atención a incidencias de usuarios</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Proyecto Internacional</div>
-                    <div class="timeline-content glass-card">
-                        <h3>F1 in Schools</h3>  
-                        <h4>Desarrollador Web</h4>  
-                        <p>Encargado del diseño y desarrollo de la página web del equipo.</p>  
-                        <ul class="timeline-list">  
-                            <li>Creación de una página web funcional y atractiva</li>  
-                            <li>Aplicación de principios de diseño y experiencia de usuario</li>  
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="proyectos" class="projects">
-        <div class="container">
-            <h2 class="section-title">Proyectos Destacados</h2>
-            <div class="projects-grid">
-                <div class="project-item" data-category="api">
-                    <div class="project-img">
-                        <img src="img/net.png" alt="API en C#">
-                    </div>
-                    <div class="project-info">
-                        <h3>API en C# con SQL Server</h3>
-                        <p>Desarrollo de una API REST para autenticación de usuarios con funcionalidades de registro, login y validación de credenciales.</p>
-                        <div class="project-tags">
-                            <span>C#</span>
-                            <span>SQL Server</span>
-                            <span>REST API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="" class="btn btn-sm">Solicitar Acceso</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-item" data-category="web">
-                    <div class="project-img">
-                        <img src="img/spikedtech.png" alt="Web de Soporte">
-                    </div>
-                    <div class="project-info">
-                        <h3>Página Web de Soporte Técnico</h3>
-                        <p>Creación de un sitio web para gestionar servicios de soporte TI, permitiendo a los clientes solicitar asistencia y dar seguimiento a sus casos.</p>
-                        <div class="project-tags">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="http://spikedtech-official.vercel.app/" class="btn btn-sm">Visitar</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-item" data-category="automation">
-                    <div class="project-img">
-                        <img src="img/automatizacion.png" alt="Automatización Python">
-                    </div>
-                    <div class="project-info">
-                        <h3>Automatización con Python</h3>
-                        <p>Scripts personalizados para optimizar procesos y mejorar la seguridad en entornos empresariales, ahorrando tiempo y reduciendo errores humanos.</p>
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Automatización</span>
-                            <span>Seguridad</span>
-                        </div>
-                        <div class="project-links">
-                            <p class="btn btn-sm">En Proceso</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="projects fade-in" style="padding: 8rem 0;">
-        <div class="container">
-            <h1 class="redes" id="redes" data-text="REDES"><span>Redes</span> Sociales</h1>
-            
-            <div class="social-links social-links-hover-bg">
-                <a href="https://www.linkedin.com/in/jmquiros19" class="social-link linkedin magnetic-btn" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/jose-m-quiros" class="social-link github magnetic-btn" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.facebook.com/jmquiros19" class="social-link facebook magnetic-btn" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/jm_quiros19/" class="social-link instagram magnetic-btn" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="contact-form" id="contact-form">
-        <div class="container">
-            <div class="form-card glass-card fade-in">
-                <form id="contactForm" onsubmit="mostrarModal(event)">
-                    <div class="form-header">
-                        <h3 class="holographic">Envíame un mensaje</h3>
-                        <p>¿Tienes un proyecto en mente o necesitas ayuda con algún servicio? ¡Contáctame!</p>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="nombre">Nombre Completo</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required class="accessibility-focus">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required class="accessibility-focus">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="asunto">Asunto</label>
-                        <select id="asunto" name="asunto" required class="accessibility-focus">
-                            <option value="">Selecciona un asunto...</option>
-                            <option value="Soporte Técnico">Soporte Técnico</option>
-                            <option value="Desarrollo Web">Desarrollo Web</option>
-                            <option value="Ciberseguridad">Ciberseguridad</option>
-                            <option value="Automatización">Automatización</option>
-                            <option value="Otro">Otro</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required class="accessibility-focus"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary magnetic-btn">
-                        <span>Enviar Mensaje</span>
-                        <i class="fas fa-paper-plane"></i>
+                <div class="skills-filter">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i>
+                        <span>Todas</span>
                     </button>
-                </form>
+                    <button class="filter-btn" data-filter="frontend">
+                        <i class="fas fa-palette"></i>
+                        <span>Frontend</span>
+                    </button>
+                    <button class="filter-btn" data-filter="backend">
+                        <i class="fas fa-server"></i>
+                        <span>Backend</span>
+                    </button>
+                    <button class="filter-btn" data-filter="security">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Seguridad</span>
+                    </button>
+                    <button class="filter-btn" data-filter="tools">
+                        <i class="fas fa-tools"></i>
+                        <span>Herramientas</span>
+                    </button>
+                </div>
+                
+                <div class="skills-container">
+                    <!-- Frontend Skills -->
+                    <div class="skill-category" data-category="frontend">
+                        <div class="category-header">
+                            <h3>Desarrollo Frontend</h3>
+                            <p>Creando interfaces modernas e intuitivas</p>
+                        </div>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <h4>HTML5</h4>
+                                <p class="skill-description">Marcado semántico y accesible</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-css3-alt"></i>
+                                </div>
+                                <h4>CSS3</h4>
+                                <p class="skill-description">Diseño responsive y animaciones</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <h4>JavaScript</h4>
+                                <p class="skill-description">ES6+, DOM, APIs y frameworks</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <h4>React</h4>
+                                <p class="skill-description">Componentes y hooks modernos</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend Skills -->
+                    <div class="skill-category" data-category="backend">
+                        <div class="category-header">
+                            <h3>Desarrollo Backend</h3>
+                            <p>Construyendo APIs robustas y escalables</p>
+                        </div>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h4>C#</h4>
+                                <p class="skill-description">APIs REST y aplicaciones enterprise</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-window-restore"></i>
+                                </div>
+                                <h4>.NET Core</h4>
+                                <p class="skill-description">Framework multiplataforma</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-python"></i>
+                                </div>
+                                <h4>Python</h4>
+                                <p class="skill-description">Automatización y scripting</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <h4>Node.js</h4>
+                                <p class="skill-description">JavaScript en el servidor</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Security Skills -->
+                    <div class="skill-category" data-category="security">
+                        <div class="category-header">
+                            <h3>Ciberseguridad</h3>
+                            <p>Protegiendo activos digitales y datos críticos</p>
+                        </div>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h4>Análisis de Riesgos</h4>
+                                <p class="skill-description">Evaluación y mitigación de amenazas</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <h4>Gestión de Incidentes</h4>
+                                <p class="skill-description">Respuesta rápida a amenazas</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <h4>Seguridad Web</h4>
+                                <p class="skill-description">OWASP Top 10 y pentesting</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h4>Auditorías</h4>
+                                <p class="skill-description">Evaluación integral de sistemas</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools Skills -->
+                    <div class="skill-category" data-category="tools">
+                        <div class="category-header">
+                            <h3>Herramientas</h3>
+                            <p>Tecnologías que potencian mi productividad</p>
+                        </div>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <h4>Git & GitHub</h4>
+                                <p class="skill-description">Control de versiones avanzado</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h4>Bases de Datos</h4>
+                                <p class="skill-description">SQL Server, MySQL, MongoDB</p>
+                            </div>
+                            
+                            <div class="skill-card">
+                                <div class="skill-icon">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                                <h4>Metodologías Ágiles</h4>
+                                <p class="skill-description">Scrum, Kanban, DevOps</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    
-    <div id="modal-contacto" class="modal">
-        <div class="modal-content glass-card">
-            <span class="modal-close" onclick="cerrarModal()">&times;</span>
-            <h3>¿Cómo prefieres enviar tu mensaje?</h3>
-            <div class="modal-options">
-                <button onclick="enviarPorWhatsApp()" class="modal-btn whatsapp-btn magnetic-btn">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </button>
-                <button onclick="enviarPorEmail()" class="modal-btn email-btn magnetic-btn">
-                    <i class="far fa-envelope"></i> Correo Electrónico
-                </button>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experiencia" class="experience" aria-labelledby="experience-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="experience-title" class="section-title" data-text="EXPERIENCE">
+                        Mi <span class="highlight">Experiencia</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        El camino que me ha llevado hasta aquí
+                    </p>
+                </header>
+                
+                <div class="timeline-container">
+                    <div class="timeline">
+                        <!-- NETCOM Experience -->
+                        <article class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>13/01/2025 - Actualidad</span>
+                                    </div>
+                                    <div class="timeline-status active">Activo</div>
+                                </div>
+                                
+                                <div class="timeline-body">
+                                    <h3 class="company-name">NETCOM – Instituto Costarricense de Acueductos y Alcantarillados (AyA)</h3>
+                                    <h4 class="position-title">Agente Telefónico – Atención al Cliente</h4>
+                                    
+                                    <p class="position-description">
+                                        Especialista en atención al cliente telefónica, brindando soporte en gestiones relacionadas con facturación, órdenes de servicio, consultas generales y atención a múltiples sedes del AyA, garantizando un servicio eficiente, empático y orientado al usuario.
+                                    </p>
+                                    
+                                   <div class="responsibilities">
+                                        <h5>Responsabilidades:</h5>
+                                        <ul>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Atención y resolución de consultas relacionadas con facturación, órdenes de servicio y gestiones administrativas.</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Orientación telefónica a usuarios sobre trámites y servicios del AyA.</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Coordinación y seguimiento de solicitudes de usuarios con diferentes sedes a nivel nacional.</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Registro y canalización de incidencias en los sistemas internos.</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Apoyo en procesos operativos asociados a la atención al cliente.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="skills-used">
+                                        <span class="skill-tag">Atención al Cliente</span>
+                                        <span class="skill-tag">Comunicación Efectiva</span>
+                                        <span class="skill-tag">Resolución de Problemas</span>
+                                        <span class="skill-tag">Gestión Telefónica</span>
+                                        <span class="skill-tag">Organización y Seguimiento de Casos</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Asamblea Legislativa Experience -->
+                        <article class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>Octubre 2024 - Diciembre 2024</span>
+                                    </div>
+                                    <div class="timeline-status completed">Completado</div>
+                                </div>
+                                
+                                <div class="timeline-body">
+                                    <h3 class="company-name">Asamblea Legislativa De Costa Rica</h3>
+                                    <h4 class="position-title">Técnico de Soporte TI</h4>
+                                    
+                                    <p class="position-description">
+                                        Cargo en el Departamento de Tecnología, encargado del mantenimiento 
+                                        y soporte técnico de la infraestructura informática institucional, 
+                                        incluyendo gestión y mantenimiento de servidores críticos.
+                                    </p>
+                                    
+                                    <div class="responsibilities">
+                                        <h5>Responsabilidades:</h5>
+                                        <ul>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Diagnóstico y resolución de problemas en hardware y software</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Configuración y mantenimiento de equipos informáticos</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Asistencia a usuarios en el uso de sistemas internos</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-server"></i>
+                                                <span>Limpieza física y mantenimiento preventivo de servidores</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-server"></i>
+                                                <span>Instalación y configuración de servidores de aplicaciones</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-server"></i>
+                                                <span>Monitoreo y mantenimiento de infraestructura de servidores</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="skills-used">
+                                        <span class="skill-tag">Hardware</span>
+                                        <span class="skill-tag">Software</span>
+                                        <span class="skill-tag">Soporte Técnico</span>
+                                        <span class="skill-tag">Sistemas Internos</span>
+                                        <span class="skill-tag">Servidores</span>
+                                        <span class="skill-tag">Mantenimiento Preventivo</span>
+                                        <span class="skill-tag">Instalación de Sistemas</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Municipalidad de Atenas Experience -->
+                        <article class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>Agosto 2023</span>
+                                    </div>
+                                    <div class="timeline-status completed">Completado</div>
+                                </div>
+                                
+                                <div class="timeline-body">
+                                    <h3 class="company-name">Municipalidad de Atenas</h3>
+                                    <h4 class="position-title">Técnico de Soporte TI</h4>
+                                    
+                                    <p class="position-description">
+                                        Cargo en el Departamento de Tecnología y Comunicación, 
+                                        especializado en infraestructura de redes y soporte técnico.
+                                    </p>
+                                    
+                                    <div class="responsibilities">
+                                        <h5>Responsabilidades:</h5>
+                                        <ul>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Soporte en redes y conectividad</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Mantenimiento y configuración de equipos</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Atención a incidencias de usuarios</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="skills-used">
+                                        <span class="skill-tag">Redes</span>
+                                        <span class="skill-tag">Conectividad</span>
+                                        <span class="skill-tag">Configuración</span>
+                                        <span class="skill-tag">Mantenimiento</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <!-- SPIKEDTECH Experience -->
+                        <article class="timeline-item featured">
+                            <div class="timeline-marker">
+                                <div class="timeline-icon founder">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>20/02/2022 - Actualidad</span>
+                                    </div>
+                                    <div class="timeline-status founder">Fundador</div>
+                                </div>
+                                
+                                <div class="timeline-body">
+                                    <h3 class="company-name">SPIKEDTECH</h3>
+                                    <h4 class="position-title">Fundador & CEO</h4>
+                                    
+                                    <p class="position-description">
+                                        Fundé SPIKEDTECH como una empresa innovadora especializada en soluciones 
+                                        tecnológicas integrales, estableciendo un referente en el mercado.
+                                    </p>
+                                    
+                                    <div class="company-highlights">
+                                        <div class="highlight-item">
+                                            <i class="fas fa-users"></i>
+                                            <span>20+ Clientes</span>
+                                        </div>
+                                        <div class="highlight-item">
+                                            <i class="fas fa-project-diagram"></i>
+                                            <span>50+ Proyectos</span>
+                                        </div>
+                                        <div class="highlight-item">
+                                            <i class="fas fa-chart-line"></i>
+                                            <span>+3 Años Crecimiento</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="responsibilities">
+                                        <h5>Servicios:</h5>
+                                        <ul>
+                                            <li>
+                                                <i class="fas fa-network-wired"></i>
+                                                <span>Instalación y mantenimiento de redes</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-shield-alt"></i>
+                                                <span>Consultoría en ciberseguridad</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-code"></i>
+                                                <span>Desarrollo de software personalizado</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-tools"></i>
+                                                <span>Consultoría tecnológica integral</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="skills-used">
+                                        <span class="skill-tag">Liderazgo</span>
+                                        <span class="skill-tag">Emprendimiento</span>
+                                        <span class="skill-tag">Ciberseguridad</span>
+                                        <span class="skill-tag">Desarrollo Web</span>
+                                    </div>
+                                    
+                                    <div class="company-link">
+                                        <a href="http://spikedtech-official.vercel.app/" target="_blank" class="btn btn-sm btn-outline" rel="noopener noreferrer">
+                                            <i class="fas fa-external-link-alt"></i>
+                                            <span>Visitar SPIKEDTECH</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- F1 in Schools Project -->
+                        <article class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <div class="timeline-date">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>Proyecto Internacional</span>
+                                    </div>
+                                    <div class="timeline-status project">Proyecto</div>
+                                </div>
+                                
+                                <div class="timeline-body">
+                                    <h3 class="company-name">F1 in Schools</h3>
+                                    <h4 class="position-title">Desarrollador Web</h4>
+                                    
+                                    <p class="position-description">
+                                        Encargado del diseño y desarrollo de la página web del equipo para 
+                                        la competencia internacional F1 in Schools.
+                                    </p>
+                                    
+                                    <div class="responsibilities">
+                                        <h5>Logros:</h5>
+                                        <ul>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Creación de una página web funcional y atractiva</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Aplicación de principios de diseño y experiencia de usuario</span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-check-circle"></i>
+                                                <span>Representación del equipo a nivel internacional</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="skills-used">
+                                        <span class="skill-tag">Desarrollo Web</span>
+                                        <span class="skill-tag">Diseño UI/UX</span>
+                                        <span class="skill-tag">Proyecto Internacional</span>
+                                        <span class="skill-tag">Trabajo en Equipo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    
-    <footer class="footer">
+        </section>
+
+        <!-- Projects Section -->
+        <section id="proyectos" class="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="projects-title" class="section-title" data-text="PROJECTS">
+                        Mis <span class="highlight">Proyectos</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Soluciones innovadoras que transforman ideas en realidad
+                    </p>
+                </header>
+                
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i>
+                        <span>Todos</span>
+                    </button>
+                    <button class="filter-btn" data-filter="web">
+                        <i class="fas fa-globe"></i>
+                        <span>Web</span>
+                    </button>
+                    <button class="filter-btn" data-filter="api">
+                        <i class="fas fa-server"></i>
+                        <span>APIs</span>
+                    </button>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Panel de Registros Project -->
+                    <article class="project-item" data-category="web">
+                        <div class="project-image">
+                            <img src="img/net.png" alt="Panel de Registros - App Web" width="400" height="250" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="action-btn" data-action="view" aria-label="Ver proyecto">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" data-action="code" aria-label="Ver código">
+                                        <i class="fas fa-code"></i>
+                                    </button>
+                                    <button class="action-btn" data-action="request" aria-label="Solicitar acceso">
+                                        <i class="fas fa-key"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Panel de Registros de Trabajos</h3>
+                                <div class="project-status">
+                                    <span class="status-badge development">En Proceso</span>
+                                </div>
+                            </div>
+                            
+                            <p class="project-description">
+                                Aplicación web desarrollada en .NET para el registro y gestión de trabajos, 
+                                con conexión directa a base de datos SQL Server para almacenamiento y consulta de datos.
+                            </p>
+                            
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-clipboard-list"></i>
+                                    <span>Registro de Trabajos</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-database"></i>
+                                    <span>Conexión SQL Server</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-search"></i>
+                                    <span>Consultas Dinámicas</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-tech-stack">
+                                <span class="tech-tag csharp">C#</span>
+                                <span class="tech-tag dotnet">.NET</span>
+                                <span class="tech-tag sql">SQL Server</span>
+                                <span class="tech-tag">ASP.NET</span>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <button class="btn btn-sm btn-primary" data-action="request">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Solicitar Acceso</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- SPIKEDTECH Website -->
+                    <article class="project-item" data-category="web">
+                        <div class="project-image">
+                            <img src="img/spikedtech.png" alt="SPIKEDTECH Website" width="400" height="250" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="action-btn" data-action="view" aria-label="Ver proyecto">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" data-action="code" aria-label="Ver código">
+                                        <i class="fas fa-code"></i>
+                                    </button>
+                                    <button class="action-btn" data-action="demo" aria-label="Ver Website">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">SPIKEDTECH Website</h3>
+                                <div class="project-status">
+                                    <span class="status-badge development">En Proceso</span>
+                                </div>
+                            </div>
+                            
+                            <p class="project-description">
+                                Sitio web corporativo para SPIKEDTECH, diseñado con tecnologías modernas 
+                                para mostrar servicios, portafolio y información de contacto de la empresa.
+                            </p>
+                            
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-building"></i>
+                                    <span>Sitio Corporativo</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Diseño Responsive</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Formulario Contacto</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-tech-stack">
+                                <span class="tech-tag html">HTML5</span>
+                                <span class="tech-tag css">CSS3</span>
+                                <span class="tech-tag javascript">JavaScript</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                            
+                            <div class="project-actions">
+                                <button class="btn btn-sm btn-primary" data-action="demo">
+                                    <i class="fas fa-play"></i>
+                                    <a href="https://spikedtech-official.vercel.app/" target="_blank" rel="noopener noreferrer"><span>Ver Website</span></a>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Automation Process -->
+                    <article class="project-item" data-category="api">
+                        <div class="project-image">
+                            <img src="img/automatizacion.png" alt="Proceso de Automatización" width="400" height="250" loading="lazy">
+                            <div class="project-overlay">
+                                <div class="project-actions">
+                                    <button class="action-btn" data-action="view" aria-label="Ver proyecto">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" data-action="code" aria-label="Ver código">
+                                        <i class="fas fa-code"></i>
+                                    </button>
+                                    <button class="action-btn" data-action="request" aria-label="Solicitar acceso">
+                                        <i class="fas fa-key"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Sistema de Automatización</h3>
+                                <div class="project-status">
+                                    <span class="status-badge development">En Proceso</span>
+                                </div>
+                            </div>
+                            
+                            <p class="project-description">
+                                Proceso de automatización diseñado para optimizar tareas repetitivas y 
+                                mejorar la eficiencia operativa mediante scripts y workflows automatizados.
+                            </p>
+                            
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-robot"></i>
+                                    <span>Automatización Total</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Programación Tareas</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Monitoreo Procesos</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-tech-stack">
+                                <span class="tech-tag python">Python</span>
+                                <span class="tech-tag">PowerShell</span>
+                                <span class="tech-tag">Windows Task</span>
+                                <span class="tech-tag">APIs</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="contact-title" class="section-title" data-text="CONTACT">
+                        <span class="highlight">Contacto</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        ¿Listo para comenzar tu proyecto? Conectemos y creemos algo increíble juntos
+                    </p>
+                </header>
+                
+                <div class="contact-form-section">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-header">
+                            <h3>Envíame un mensaje</h3>
+                            <p>Comparte los detalles de tu proyecto</p>
+                        </div>
+                        
+                        <div class="form-body">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre">
+                                        <i class="fas fa-user"></i>
+                                        <span>Nombre *</span>
+                                    </label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                                    <div class="error-message">Por favor, ingresa tu nombre</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>Email *</span>
+                                    </label>
+                                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                                    <div class="error-message">Por favor, ingresa un email válido</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="asunto">
+                                    <i class="fas fa-tag"></i>
+                                    <span>Asunto *</span>
+                                </label>
+                                <select id="asunto" name="asunto" required>
+                                    <option value="">Selecciona el tipo de proyecto...</option>
+                                    <option value="web-development">Desarrollo Web</option>
+                                    <option value="api-development">Desarrollo de APIs</option>
+                                    <option value="cybersecurity">Consultoría en Ciberseguridad</option>
+                                    <option value="automation">Automatización</option>
+                                    <option value="support">Soporte Técnico</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                                <div class="error-message">Por favor, selecciona un asunto</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensaje">
+                                    <i class="fas fa-comment"></i>
+                                    <span>Mensaje *</span>
+                                </label>
+                                <textarea id="mensaje" name="mensaje" placeholder="Describe tu proyecto, objetivos, funcionalidades que necesitas..." required rows="6"></textarea>
+                                <div class="error-message">Por favor, describe tu proyecto</div>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="privacy" name="privacy" required>
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-text">
+                                        Acepto la política de privacidad *
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span class="btn-content">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span>Enviar Mensaje</span>
+                                </span>
+                                <div class="btn-loader">
+                                    <div class="spinner"></div>
+                                </div>
+                            </button>
+                            
+                            <div class="form-note">
+                                <i class="fas fa-info-circle"></i>
+                                <span>Responderé en menos de 24 horas</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>&copy; 2025 JOSE M QUIROS. Todos los derechos reservados.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-text">JM</div>
+                        <div class="brand-info">
+                            <h3>Jose M Quiros</h3>
+                            <p>Estudiante de Ingenieria en Seguridad Informatica</p>
+                        </div>
+                    </div>
+                    
+                    <p class="footer-description">
+                        Transformando ideas en soluciones digitales seguras e innovadoras.
+                    </p>
+                    
+                    <div class="footer-social">
+                        <h4>Conecta conmigo</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/jmquiros19" class="social-link linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/jose-m-quiros" class="social-link github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.facebook.com/jmquiros19" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/jm_quiros19/" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="footer-section">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="#sobre-mi">Sobre Mi</a></li>
+                            <li><a href="#experiencia">Experiencia</a></li>
+                            <li><a href="#habilidades">Habilidades</a></li>
+                            <li><a href="http://spikedtech-official.vercel.app/" target="_blank" rel="noopener noreferrer">SPIKEDTECH</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Contacto</h4>
+                        <div class="contact-info">
+                            <p>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:spikedtech19@gmail.com">spikedtech19@gmail.com</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+50687394231">+506 8739-4231</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Costa Rica</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; <span class="current-year">2025</span> Jose M Quiros. Todos los derechos reservados.</p>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Modal de Contacto -->
+    <div id="modal-contacto" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-backdrop" onclick="cerrarModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">¿Cómo prefieres contactarme?</h3>
+                <button class="modal-close" onclick="cerrarModal()" aria-label="Cerrar modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <p>Elige tu método de contacto preferido:</p>
+                
+                <div class="modal-options">
+                    <button class="modal-option whatsapp-option" onclick="enviarPorWhatsApp()">
+                        <div class="option-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="option-content">
+                            <h4>WhatsApp</h4>
+                            <p>Respuesta inmediata</p>
+                        </div>
+                        <div class="option-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </button>
+                    
+                    <button class="modal-option email-option" onclick="enviarPorEmail()">
+                        <div class="option-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="option-content">
+                            <h4>Correo Electrónico</h4>
+                            <p>Comunicación formal</p>
+                        </div>
+                        <div class="option-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accessibility Panel -->
+    <div class="accessibility-panel" id="accessibilityPanel">
+        <button class="accessibility-toggle" id="accessibilityToggle" aria-label="Abrir panel de accesibilidad">
+            <i class="fas fa-universal-access"></i>
+        </button>
+        
+        <div class="accessibility-content">
+            <h3>Opciones de Accesibilidad</h3>
+            
+            <div class="accessibility-options">
+                <div class="accessibility-option">
+                    <label>Tamaño de fuente:</label>
+                    <div class="font-size-controls">
+                        <button class="font-btn" data-size="small">A</button>
+                        <button class="font-btn active" data-size="normal">A</button>
+                        <button class="font-btn" data-size="large">A</button>
+                    </div>
+                </div>
+                
+                <div class="accessibility-option">
+                    <label>
+                        <input type="checkbox" id="highContrast">
+                        <span>Alto contraste</span>
+                    </label>
+                </div>
+                
+                <div class="accessibility-option">
+                    <label>
+                        <input type="checkbox" id="reduceMotion">
+                        <span>Reducir animaciones</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="js/script.js"></script>
-    <script src="js/animacion.js"></script>
-    
+    <script src="js/animaciones.js"></script>
+        
 </body>
 </html>
