@@ -2500,6 +2500,7 @@ section {
 .social-links {
   display: flex;
   gap: var(--space-4);
+  justify-content: center;
 }
 
 .social-link {
