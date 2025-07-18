@@ -2989,7 +2989,6 @@ section {
 }
 
 .footer-logo {
-  display: flex;
   align-items: center;
   gap: var(--space-3);
 }
@@ -3018,7 +3017,6 @@ section {
 .footer-description {
   color: var(--text-secondary);
   line-height: 1.6;
-  max-width: 400px;
 }
 
 .footer-social h4 {
