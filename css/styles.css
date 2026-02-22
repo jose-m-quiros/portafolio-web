@@ -2977,9 +2977,10 @@ section {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: var(--space-16);
   margin-bottom: var(--space-16);
+  text-align: center;
 }
 
 .footer-brand {
@@ -2988,10 +2989,6 @@ section {
   gap: var(--space-8);
 }
 
-.footer-logo {
-  align-items: center;
-  gap: var(--space-3);
-}
 
 .footer-logo .logo-text {
   width: 50px;
@@ -3719,6 +3716,7 @@ body.reduce-motion *::after {
   .footer-content {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-10);
+    text-align: center;
   }
 
   .timeline::before {

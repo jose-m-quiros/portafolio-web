@@ -11,7 +11,7 @@ class ModernPortfolio {
     this.bindEvents();
     this.setupIntersectionObserver();
     this.initializeComponents();
-    
+
     // Variable para almacenar datos del formulario temporalmente
     this.formDataCache = null;
   }
@@ -24,6 +24,11 @@ class ModernPortfolio {
     this.currentSection = "inicio";
     this.isScrolling = false;
     this.scrollTimer = null;
+
+    // ==========================================
+    // RUTA DEL CV - CAMBIA SOLO AQUÍ
+    // ==========================================
+    this.CV_PATH = "assets/documents/JMCV.pdf";
 
     // Elementos del DOM
     this.elements = {
@@ -187,6 +192,17 @@ class ModernPortfolio {
     this.initializeAccessibility();
     this.addRippleEffect();
     this.initializeSkillCards();
+    this.initializeCVLinks(); // ← Aplica CV_PATH a todos los enlaces del CV
+  }
+
+  // ==========================================
+  // GESTIÓN DEL CV
+  // ==========================================
+
+  initializeCVLinks() {
+    document.querySelectorAll("a[data-cv-link]").forEach((link) => {
+      link.href = this.CV_PATH;
+    });
   }
 
   // ==========================================
@@ -644,67 +660,50 @@ class ModernPortfolio {
   // FORMULARIO DE CONTACTO
   // ==========================================
 
-  /**
-   * Formatea los datos del formulario para envío
-   */
   formatFormData(formData) {
-    // Mapeo de valores a labels legibles
     const subjectLabels = {
-      'web-development': 'Desarrollo Web',
-      'api-development': 'Desarrollo de APIs', 
-      'cybersecurity': 'Consultoría en Ciberseguridad',
-      'automation': 'Automatización',
-      'support': 'Soporte Técnico',
-      'other': 'Otro'
+      "web-development": "Desarrollo Web",
+      "api-development": "Desarrollo de APIs",
+      cybersecurity: "Consultoría en Ciberseguridad",
+      automation: "Automatización",
+      support: "Soporte Técnico",
+      ai: "Integración de IA",
+      other: "Otro",
     };
 
-    const nombre = formData.get('nombre')?.trim() || '';
-    const email = formData.get('email')?.trim() || '';
-    const asunto = formData.get('asunto')?.trim() || '';
-    const mensaje = formData.get('mensaje')?.trim() || '';
-    
-    // Obtener el label legible del asunto
+    const nombre = formData.get("nombre")?.trim() || "";
+    const email = formData.get("email")?.trim() || "";
+    const asunto = formData.get("asunto")?.trim() || "";
+    const mensaje = formData.get("mensaje")?.trim() || "";
     const asuntoLabel = subjectLabels[asunto] || asunto;
-    
-    return {
-      nombre,
-      email,
-      asunto: asuntoLabel,
-      mensaje,
-      rawAsunto: asunto
-    };
+
+    return { nombre, email, asunto: asuntoLabel, mensaje, rawAsunto: asunto };
   }
 
-  /**
-   * Formatea los datos para WhatsApp
-   */
   formatForWhatsApp(data) {
     const { nombre, email, asunto, mensaje } = data;
-    
+
     let message = `*NUEVA CONSULTA DESDE PORTFOLIO*\n\n`;
     message += `*Nombre:* ${nombre}\n`;
     message += `*Email:* ${email}\n`;
     message += `*Tipo de Proyecto:* ${asunto}\n\n`;
     message += `*Mensaje:*\n${mensaje}\n\n`;
-    message += `*Fecha:* ${new Date().toLocaleDateString('es-ES', {
-      year: 'numeric',
-      month: 'long', 
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
+    message += `*Fecha:* ${new Date().toLocaleDateString("es-ES", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
     })}`;
-    
+
     return message;
   }
 
-  /**
-   * Formatea los datos para Email
-   */
   formatForEmail(data) {
     const { nombre, email, asunto, mensaje } = data;
-    
+
     let subject = `Portfolio - ${asunto} - ${nombre}`;
-    
+
     let body = `Hola Jose!\n\n`;
     body += `He visitado tu portfolio y me interesa contactarte.\n\n`;
     body += `DATOS DE CONTACTO:\n`;
@@ -712,33 +711,27 @@ class ModernPortfolio {
     body += `- Email: ${email}\n`;
     body += `- Tipo de Proyecto: ${asunto}\n\n`;
     body += `MENSAJE:\n${mensaje}\n\n`;
-    body += `Fecha de envío: ${new Date().toLocaleDateString('es-ES', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
+    body += `Fecha de envío: ${new Date().toLocaleDateString("es-ES", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
     })}\n\n`;
     body += `Espero tu respuesta!\n\nSaludos.`;
-    
+
     return { subject, body };
   }
 
   handleFormSubmit(e) {
     e.preventDefault();
 
-    // Validar formulario PRIMERO
-    if (!this.validateForm()) {
-      return;
-    }
+    if (!this.validateForm()) return;
 
-    // CAPTURAR Y GUARDAR DATOS ANTES DE CUALQUIER COSA
     const formData = new FormData(this.elements.contactForm);
     this.formDataCache = this.formatFormData(formData);
 
-    // Simular envío con loading
     this.simulateFormSubmission().then(() => {
-      // MOSTRAR MODAL DESPUÉS DE CAPTURAR DATOS
       this.showContactModal();
     });
   }
@@ -746,8 +739,6 @@ class ModernPortfolio {
   validateForm() {
     const formData = new FormData(this.elements.contactForm);
     const errors = [];
-
-    // Validar campos requeridos
     const requiredFields = ["nombre", "email", "asunto", "mensaje"];
 
     requiredFields.forEach((field) => {
@@ -762,7 +753,6 @@ class ModernPortfolio {
       }
     });
 
-    // Validar email
     const email = formData.get("email");
     if (email && !this.isValidEmail(email)) {
       const emailField = document.getElementById("email");
@@ -770,7 +760,6 @@ class ModernPortfolio {
       errors.push("email");
     }
 
-    // Validar checkbox de privacidad
     const privacy = formData.get("privacy");
     if (!privacy) {
       const privacyField = document.getElementById("privacy");
@@ -785,7 +774,9 @@ class ModernPortfolio {
   }
 
   showFieldError(fieldElement, message) {
-    const formGroup = fieldElement.closest(".form-group") || fieldElement.closest(".checkbox-group");
+    const formGroup =
+      fieldElement.closest(".form-group") ||
+      fieldElement.closest(".checkbox-group");
     const errorElement = formGroup.querySelector(".error-message");
 
     formGroup.classList.add("error");
@@ -795,7 +786,9 @@ class ModernPortfolio {
   }
 
   clearFieldError(fieldElement) {
-    const formGroup = fieldElement.closest(".form-group") || fieldElement.closest(".checkbox-group");
+    const formGroup =
+      fieldElement.closest(".form-group") ||
+      fieldElement.closest(".checkbox-group");
     formGroup.classList.remove("error");
   }
 
@@ -807,16 +800,15 @@ class ModernPortfolio {
   async simulateFormSubmission() {
     const submitBtn = this.elements.contactForm.querySelector(".submit-btn");
 
-    // Mostrar estado de carga
     submitBtn.classList.add("loading");
     submitBtn.disabled = true;
 
     try {
-      // Simular delay de red
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+      await new Promise((resolve) => setTimeout(resolve, 1500));
     } catch (error) {
-      this.showErrorNotification("Error al enviar el mensaje. Inténtalo de nuevo.");
+      this.showErrorNotification(
+        "Error al enviar el mensaje. Inténtalo de nuevo."
+      );
     } finally {
       submitBtn.classList.remove("loading");
       submitBtn.disabled = false;
@@ -824,7 +816,6 @@ class ModernPortfolio {
   }
 
   showErrorNotification(message) {
-    // Crear notificación de error
     const notification = document.createElement("div");
     notification.className = "notification error";
     notification.innerHTML = `
@@ -832,31 +823,23 @@ class ModernPortfolio {
       <span>${message}</span>
     `;
     notification.style.cssText = `
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--error);
-      color: white;
-      padding: 16px 20px;
-      border-radius: 8px;
-      box-shadow: var(--shadow-lg);
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      position: fixed; top: 20px; right: 20px;
+      background: var(--error); color: white;
+      padding: 16px 20px; border-radius: 8px;
+      box-shadow: var(--shadow-lg); z-index: 9999;
+      display: flex; align-items: center; gap: 8px;
       animation: slideInRight 0.3s ease;
     `;
 
     document.body.appendChild(notification);
 
     setTimeout(() => {
-      notification.style.animation = 'slideOutRight 0.3s ease';
+      notification.style.animation = "slideOutRight 0.3s ease";
       setTimeout(() => notification.remove(), 300);
     }, 5000);
   }
 
   showSuccessMessage(message) {
-    // Crear notificación de éxito
     const notification = document.createElement("div");
     notification.className = "notification success";
     notification.innerHTML = `
@@ -864,25 +847,18 @@ class ModernPortfolio {
       <span>${message}</span>
     `;
     notification.style.cssText = `
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: var(--success);
-      color: white;
-      padding: 16px 20px;
-      border-radius: 8px;
-      box-shadow: var(--shadow-lg);
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      position: fixed; top: 20px; right: 20px;
+      background: var(--success); color: white;
+      padding: 16px 20px; border-radius: 8px;
+      box-shadow: var(--shadow-lg); z-index: 9999;
+      display: flex; align-items: center; gap: 8px;
       animation: slideInRight 0.3s ease;
     `;
-    
+
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
-      notification.style.animation = 'slideOutRight 0.3s ease';
+      notification.style.animation = "slideOutRight 0.3s ease";
       setTimeout(() => notification.remove(), 300);
     }, 3000);
   }
@@ -902,8 +878,7 @@ class ModernPortfolio {
     if (this.elements.modal) {
       this.elements.modal.classList.remove("active");
       this.elements.body.style.overflow = "";
-      
-      // RESETEAR EL FORMULARIO CUANDO SE CIERRA EL MODAL
+
       if (this.elements.contactForm) {
         this.elements.contactForm.reset();
         this.formDataCache = null;
@@ -912,7 +887,6 @@ class ModernPortfolio {
   }
 
   handleModalClick(e) {
-    // Cerrar modal al hacer clic en el backdrop
     if (
       e.target.classList.contains("modal-backdrop") ||
       e.target.classList.contains("modal-close")
@@ -920,7 +894,6 @@ class ModernPortfolio {
       this.hideContactModal();
     }
 
-    // Manejar opciones del modal
     if (e.target.closest(".whatsapp-option")) {
       this.openWhatsApp();
     }
@@ -932,56 +905,34 @@ class ModernPortfolio {
 
   openWhatsApp() {
     try {
-      // USAR DATOS DEL CACHE EN LUGAR DEL FORMULARIO
-      if (!this.formDataCache) {
-        return;
-      }
-      
-      // Formatear mensaje
+      if (!this.formDataCache) return;
+
       const message = this.formatForWhatsApp(this.formDataCache);
-      
-      // Codificar para URL
       const encodedMessage = encodeURIComponent(message);
       const whatsappURL = `https://wa.me/50687394231?text=${encodedMessage}`;
-      
-      // Abrir WhatsApp
-      window.open(whatsappURL, '_blank');
-      
-      // Cerrar modal
+
+      window.open(whatsappURL, "_blank");
       this.hideContactModal();
-      
-      // Mostrar confirmación
-      this.showSuccessMessage('Mensaje preparado para WhatsApp');
-      
+      this.showSuccessMessage("Mensaje preparado para WhatsApp");
     } catch (error) {
-      alert('Error al preparar el mensaje para WhatsApp');
+      alert("Error al preparar el mensaje para WhatsApp");
     }
   }
 
   openEmail() {
     try {
-      // USAR DATOS DEL CACHE EN LUGAR DEL FORMULARIO
-      if (!this.formDataCache) {
-        return;
-      }
-      
-      // Formatear email
+      if (!this.formDataCache) return;
+
       const emailData = this.formatForEmail(this.formDataCache);
-      
-      // Construir URL de mailto
-      const mailtoURL = `mailto:spikedtech19@gmail.com?subject=${encodeURIComponent(emailData.subject)}&body=${encodeURIComponent(emailData.body)}`;
-      
-      // Abrir cliente de email
+      const mailtoURL = `mailto:spikedtech19@gmail.com?subject=${encodeURIComponent(
+        emailData.subject
+      )}&body=${encodeURIComponent(emailData.body)}`;
+
       window.location.href = mailtoURL;
-      
-      // Cerrar modal
       this.hideContactModal();
-      
-      // Mostrar confirmación
-      this.showSuccessMessage('Cliente de email abierto');
-      
+      this.showSuccessMessage("Cliente de email abierto");
     } catch (error) {
-      alert('Error al preparar el email');
+      alert("Error al preparar el email");
     }
   }
 
@@ -995,7 +946,6 @@ class ModernPortfolio {
   }
 
   setupAccessibilityControls() {
-    // Controles de tamaño de fuente
     const fontBtns = document.querySelectorAll(".font-btn");
     fontBtns.forEach((btn) => {
       btn.addEventListener("click", (e) => {
@@ -1004,13 +954,11 @@ class ModernPortfolio {
       });
     });
 
-    // Control de alto contraste
     const highContrastToggle = document.getElementById("highContrast");
     highContrastToggle?.addEventListener("change", (e) => {
       this.toggleHighContrast(e.target.checked);
     });
 
-    // Control de reducir movimiento
     const reduceMotionToggle = document.getElementById("reduceMotion");
     reduceMotionToggle?.addEventListener("change", (e) => {
       this.toggleReduceMotion(e.target.checked);
@@ -1022,7 +970,6 @@ class ModernPortfolio {
   }
 
   changeFontSize(size) {
-    // Actualizar clase activa
     document.querySelectorAll(".font-btn").forEach((btn) => {
       btn.classList.remove("active");
       if (btn.getAttribute("data-size") === size) {
@@ -1030,7 +977,6 @@ class ModernPortfolio {
       }
     });
 
-    // Aplicar tamaño
     this.elements.body.className = this.elements.body.className.replace(
       /font-(small|normal|large)/g,
       ""
@@ -1053,7 +999,6 @@ class ModernPortfolio {
   }
 
   applyAccessibilityPreferences() {
-    // Aplicar preferencias guardadas
     this.changeFontSize(this.preferences.fontSize);
     this.toggleHighContrast(this.preferences.highContrast);
     this.toggleReduceMotion(this.preferences.reduceMotion);
@@ -1083,33 +1028,22 @@ class ModernPortfolio {
 
     const ripple = document.createElement("div");
     ripple.style.cssText = `
-            position: absolute;
-            width: ${size}px;
-            height: ${size}px;
-            left: ${x}px;
-            top: ${y}px;
-            background: radial-gradient(circle, rgba(14, 165, 233, 0.3) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            transform: scale(0);
-            animation: rippleAnimation 0.6s ease-out;
-            z-index: 1000;
-        `;
+      position: absolute; width: ${size}px; height: ${size}px;
+      left: ${x}px; top: ${y}px;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.3) 0%, transparent 70%);
+      border-radius: 50%; pointer-events: none;
+      transform: scale(0); animation: rippleAnimation 0.6s ease-out; z-index: 1000;
+    `;
 
     element.style.position = "relative";
     element.style.overflow = "hidden";
     element.appendChild(ripple);
 
-    setTimeout(() => {
-      ripple.remove();
-    }, 600);
+    setTimeout(() => ripple.remove(), 600);
   }
 
   handleMouseMove(e) {
-    // Efecto de cursor customizado
     this.updateCursorPosition(e.clientX, e.clientY);
-
-    // Efectos de paralaje suave en elementos específicos
     this.updateParallaxElements(e.clientX, e.clientY);
   }
 
@@ -1127,7 +1061,6 @@ class ModernPortfolio {
       const speed = parseFloat(element.getAttribute("data-parallax")) || 0.1;
       const deltaX = (x - centerX) * speed;
       const deltaY = (y - centerY) * speed;
-
       element.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
     });
   }
@@ -1137,27 +1070,16 @@ class ModernPortfolio {
   // ==========================================
 
   handleKeydown(e) {
-    // Escape para cerrar modales y menús
     if (e.key === "Escape") {
-      if (this.isMenuOpen) {
-        this.closeMobileMenu();
-      }
-
-      if (this.elements.modal?.classList.contains("active")) {
-        this.hideContactModal();
-      }
-
-      if (this.elements.accessibilityPanel?.classList.contains("active")) {
-        this.toggleAccessibilityPanel();
-      }
+      if (this.isMenuOpen) this.closeMobileMenu();
+      if (this.elements.modal?.classList.contains("active")) this.hideContactModal();
+      if (this.elements.accessibilityPanel?.classList.contains("active")) this.toggleAccessibilityPanel();
     }
 
-    // Navegación con teclado
     if (e.key === "Tab") {
       this.elements.body.classList.add("using-keyboard");
     }
 
-    // Atajos de teclado
     if (e.ctrlKey || e.metaKey) {
       switch (e.key) {
         case "d":
@@ -1173,7 +1095,6 @@ class ModernPortfolio {
   // ==========================================
 
   handleResize() {
-    // Actualizar dimensiones en CSS custom properties
     document.documentElement.style.setProperty(
       "--viewport-height",
       window.innerHeight + "px"
@@ -1183,17 +1104,14 @@ class ModernPortfolio {
       window.innerWidth + "px"
     );
 
-    // Cerrar menú móvil si el viewport se hace más grande
     if (window.innerWidth > 991 && this.isMenuOpen) {
       this.closeMobileMenu();
     }
 
-    // Recalcular posiciones si es necesario
     this.recalculatePositions();
   }
 
   recalculatePositions() {
-    // Recalcular posiciones de elementos fijos o sticky si es necesario
     this.optimizePerformance();
   }
 
@@ -1231,21 +1149,15 @@ class ModernPortfolio {
   // ==========================================
 
   static cerrarModal() {
-    if (window.portfolioApp) {
-      window.portfolioApp.hideContactModal();
-    }
+    if (window.portfolioApp) window.portfolioApp.hideContactModal();
   }
 
   static enviarPorWhatsApp() {
-    if (window.portfolioApp) {
-      window.portfolioApp.openWhatsApp();
-    }
+    if (window.portfolioApp) window.portfolioApp.openWhatsApp();
   }
 
   static enviarPorEmail() {
-    if (window.portfolioApp) {
-      window.portfolioApp.openEmail();
-    }
+    if (window.portfolioApp) window.portfolioApp.openEmail();
   }
 }
 
@@ -1253,7 +1165,6 @@ class ModernPortfolio {
 // INICIALIZACIÓN
 // ==========================================
 
-// Inicializar cuando el DOM esté listo
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initializePortfolio);
 } else {
@@ -1263,12 +1174,10 @@ if (document.readyState === "loading") {
 function initializePortfolio() {
   window.portfolioApp = new ModernPortfolio();
 
-  // Exponer funciones globales para compatibilidad con HTML
   window.cerrarModal = ModernPortfolio.cerrarModal;
   window.enviarPorWhatsApp = ModernPortfolio.enviarPorWhatsApp;
   window.enviarPorEmail = ModernPortfolio.enviarPorEmail;
 
-  // Agregar estilos para notificaciones
   addNotificationStyles();
 }
 
@@ -1277,34 +1186,30 @@ function initializePortfolio() {
 // ==========================================
 
 function addNotificationStyles() {
-  if (document.getElementById('notification-styles')) return;
-  
-  const styles = document.createElement('style');
-  styles.id = 'notification-styles';
+  if (document.getElementById("notification-styles")) return;
+
+  const styles = document.createElement("style");
+  styles.id = "notification-styles";
   styles.textContent = `
     @keyframes slideInRight {
       from { transform: translateX(100%); opacity: 0; }
       to { transform: translateX(0); opacity: 1; }
     }
-
     @keyframes slideOutRight {
       from { transform: translateX(0); opacity: 1; }
       to { transform: translateX(100%); opacity: 0; }
     }
-
     .notification {
       font-family: var(--font-family);
       font-size: 14px;
       font-weight: 500;
     }
-
     .notification i {
       font-size: 16px;
     }
   `;
-  
+
   document.head.appendChild(styles);
 }
 
-// Exponer clase para uso externo si es necesario
 window.ModernPortfolio = ModernPortfolio;
