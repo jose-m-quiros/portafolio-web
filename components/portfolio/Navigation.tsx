@@ -11,6 +11,7 @@ import MoreMenu from '../ui/more-menu';
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const sectionIds = ['home', 'about', 'skills', 'projects', 'experience', 'education', 'contact'];
   const { t } = useI18n();
 
   const allLinks = [
@@ -30,23 +31,31 @@ export default function Navigation() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+    let ticking = false;
 
-      // Detect active section
-      const sections = allLinks.map(l => l.href.replace('#', ''));
-      let current = 'home';
-      for (const id of sections) {
-        const el = document.getElementById(id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 120) current = id;
+    const handleScroll = () => {
+      if (ticking) return;
+
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 20);
+
+        let current = 'home';
+        for (const id of sectionIds) {
+          const el = document.getElementById(id);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            if (rect.top <= 120) current = id;
+          }
         }
-      }
-      setActiveSection(current);
+
+        setActiveSection(current);
+        ticking = false;
+      });
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -140,24 +149,22 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden fixed inset-0 z-[70] bg-background backdrop-blur-lg transition-all duration-300 ${
+        className={`md:hidden fixed left-0 right-0 bottom-0 top-16 z-[70] bg-background transition-opacity duration-150 ${
           isOpen ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none'
         }`}
-        style={{ top: '64px' }}
       >
-        <div className="mx-4 mt-4 rounded-xl border border-border bg-card shadow-xl">
-          <div className="flex flex-col items-center justify-center min-h-[calc(100vh-112px)] space-y-6 px-6 py-8">
-          {allLinks.map((link, index) => (
+        <div className="h-[calc(100dvh-4rem)] w-full">
+          <div className="flex h-full w-full flex-col items-center justify-center space-y-6 px-6 py-8">
+          {allLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={handleLinkClick}
-              className={`text-xl font-medium smooth-transition animate-fadeIn ${
+              className={`text-xl font-medium smooth-transition ${
                 activeSection === link.href.replace('#', '')
                   ? 'text-primary'
                   : 'text-muted-foreground hover:text-primary'
               }`}
-              style={{ animationDelay: `${index * 50}ms` }}
             >
               {link.label}
             </Link>
