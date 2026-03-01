@@ -140,12 +140,13 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden fixed inset-0 bg-background/95 backdrop-blur-lg transition-all duration-300 ${
-          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        className={`md:hidden fixed inset-0 z-[70] bg-background backdrop-blur-lg transition-all duration-300 ${
+          isOpen ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none'
         }`}
         style={{ top: '64px' }}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-6">
+        <div className="mx-4 mt-4 rounded-xl border border-border bg-card shadow-xl">
+          <div className="flex flex-col items-center justify-center min-h-[calc(100vh-112px)] space-y-6 px-6 py-8">
           {allLinks.map((link, index) => (
             <Link
               key={link.href}
@@ -164,6 +165,7 @@ export default function Navigation() {
           <div className="flex items-center space-x-3">
             <LanguageToggle />
             <ThemeToggle />
+          </div>
           </div>
         </div>
       </div>
