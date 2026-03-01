@@ -154,41 +154,48 @@ export default function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile Navigation — rendered outside <nav> to avoid stacking context issues */}
-      {isOpen && (
+      {/* Mobile Navigation — always mounted, toggled via CSS for instant open/close */}
+      <div
+        className={`md:hidden fixed inset-0 z-[9999] transition-[opacity,visibility] duration-200 ease-out ${
+          isOpen
+            ? 'opacity-100 visible'
+            : 'opacity-0 invisible pointer-events-none'
+        }`}
+        style={{ top: '4rem' }}
+        aria-hidden={!isOpen}
+      >
+        {/* Solid background layer */}
         <div
-          className="md:hidden fixed inset-0 z-[9999]"
-          style={{ top: '4rem' }}
-        >
-          {/* Solid background layer */}
-          <div
-            className="absolute inset-0"
-            style={{ backgroundColor: 'hsl(var(--background))' }}
-          />
+          className="absolute inset-0"
+          style={{ backgroundColor: 'hsl(var(--background))' }}
+        />
 
-          {/* Content layer */}
-          <div className="relative z-10 flex h-full w-full flex-col items-center justify-center space-y-7 px-6">
-            {allLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={handleLinkClick}
-                className={`text-base font-medium transition-colors duration-200 ${
-                  activeSection === link.href.replace('#', '')
-                    ? 'text-primary'
-                    : 'text-foreground hover:text-primary'
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="flex items-center space-x-4 pt-3">
-              <LanguageToggle />
-              <ThemeToggle />
-            </div>
+        {/* Content layer */}
+        <div
+          className={`relative z-10 flex h-full w-full flex-col items-center justify-center space-y-7 px-6 transition-transform duration-200 ease-out ${
+            isOpen ? 'translate-y-0' : '-translate-y-4'
+          }`}
+        >
+          {allLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={handleLinkClick}
+              className={`text-base font-medium transition-colors duration-150 ${
+                activeSection === link.href.replace('#', '')
+                  ? 'text-primary'
+                  : 'text-foreground hover:text-primary'
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="flex items-center space-x-4 pt-3">
+            <LanguageToggle />
+            <ThemeToggle />
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }
