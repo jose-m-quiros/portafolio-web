@@ -133,7 +133,7 @@ export default function Hero() {
         {/* Scroll indicator */}
         <Link
           href="#about"
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
+          className="absolute -bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
         >
           <ChevronDown className="h-8 w-8 text-muted-foreground" />
         </Link>

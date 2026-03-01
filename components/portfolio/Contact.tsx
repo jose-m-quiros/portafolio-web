@@ -83,12 +83,12 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
+            <div className="space-y-6 text-left">
+              <div className="!flex !justify-start items-start gap-4">
                 <div className="flex-shrink-0 p-3 bg-primary/10 rounded-lg">
                   <Mail className="h-5 w-5 text-primary" />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-semibold mb-1">{t('contact.email_label')}</h4>
                   <a
                     href="mailto:jqchaves1928@gmail.com"
@@ -99,11 +99,11 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="!flex !justify-start items-start gap-4">
                 <div className="flex-shrink-0 p-3 bg-primary/10 rounded-lg">
                   <MapPin className="h-5 w-5 text-primary" />
                 </div>
-                <div>
+                <div className="text-left">
                   <h4 className="font-semibold mb-1">{t('contact.location_label')}</h4>
                   <p className="text-muted-foreground">{t('contact.location_value')}</p>
                 </div>

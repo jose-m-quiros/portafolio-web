@@ -313,3 +313,25 @@ html {
 ::selection {
   @apply bg-primary/20 text-primary;
 }
+
+/* Left-aligned layout on small mobile (<=639px) — exclude nav */
+@media (max-width: 639px) {
+  .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .section-container > * {
+    width: 100%;
+  }
+
+  .section-container .grid {
+    justify-items: stretch;
+  }
+
+  .section-container .card {
+    text-align: left;
+  }
+}

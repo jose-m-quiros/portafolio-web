@@ -41,18 +41,18 @@ const categories = ['all', 'frontend', 'backend', 'database', 'tools', 'other'];
 
 const skills: SkillType[] = [
   // Frontend
+  { name: 'CSS', icon: FaCss3Alt, category: 'frontend' },
+  { name: 'HTML', icon: FaHtml5, category: 'frontend' },
   { name: 'React', icon: FaReact, category: 'frontend' },
   { name: 'Next.js', icon: SiNextdotjs, category: 'frontend' },
   { name: 'TypeScript', icon: SiTypescript, category: 'frontend' },
   { name: 'JavaScript', icon: FaJsSquare, category: 'frontend' },
   { name: 'Tailwind CSS', icon: SiTailwindcss, category: 'frontend' },
-  { name: 'HTML', icon: FaHtml5, category: 'frontend' },
-  { name: 'CSS', icon: FaCss3Alt, category: 'frontend' },
   
   // Backend
-  { name: 'Python', icon: FaPython, category: 'backend' },
-  { name: 'Java', icon: FaJava, category: 'backend' },
   { name: 'C#', icon: SiDotnet, category: 'backend' },
+  { name: 'Java', icon: FaJava, category: 'backend' },
+  { name: 'Python', icon: FaPython, category: 'backend' },
 
   // Database
   { name: 'SQL Server', icon: FaDatabase, category: 'database' },
@@ -115,15 +115,15 @@ export default function Skills() {
         </div>
 
         {/* Grid de skills */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {filteredSkills.map((skill, index) => {
             const Icon = skill.icon;
             return (
-              <div key={index} className="card flex items-center gap-3 hover:shadow-md smooth-transition rounded-xl">
+              <div key={index} className="card flex items-center gap-4 hover:shadow-md smooth-transition rounded-xl w-full">
                 <div className="icon-circle">
                   <Icon className="icon-svg text-primary" />
                 </div>
-                <span className="font-semibold text-lg">{skill.name}</span>
+                <span className="font-semibold text-base">{skill.name}</span>
               </div>
             );
           })}

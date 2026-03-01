@@ -58,12 +58,12 @@ export default function About() {
 
             {/* Combined Values + Highlights grid (full-width under the two-column intro) */}
             <div className="mt-12">
-              <h3 className="text-2xl font-semibold mb-6">{valuesTitle}</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              <h3 className="text-2xl font-semibold mb-6 text-center">{valuesTitle}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 {combined.map((item, idx) => {
                   const IconComp = icons[idx % icons.length];
                   return (
-                    <div key={idx} className="card flex items-start gap-4 min-h-[110px]">
+                    <div key={idx} className="card flex items-start gap-4 min-h-[110px] w-full">
                       <div className="icon-circle">
                         <IconComp className="icon-svg text-primary" />
                       </div>
