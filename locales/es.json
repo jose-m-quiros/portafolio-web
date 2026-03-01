@@ -1,0 +1,291 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "more": "Más",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "education": "Educación",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "Bienvenido a mi Portafolio",
+    "greeting": "Hola soy",
+    "iam": "Soy",
+    "roles": [
+      "Estudiante de Ingeniería en Seguridad Informática",
+      "Desarrollador Full Stack",
+      "Especialista en Ciberseguridad",
+      "Fundador de SPIKEDTECH",
+      "Consultor Tecnológico"
+    ],
+    "description": "Transformo ideas en soluciones digitales seguras. Me especializo en ciberseguridad, desarrollo web full stack y automatización de procesos.",
+    "cta_contact": "Contáctame",
+    "cta_cv": "Descargar CV"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "title_main": "Sobre",
+    "title_highlight": "Mí",
+    "subtitle": "Conoce mi historia y pasión por la tecnología",
+    "intro": [
+      "Jose M Quiros trabajando",
+      "Soy un profesional apasionado por la seguridad informática y el desarrollo web full stack, con una visión clara: crear tecnología que no solo funcione, sino que también proteja y empodere a las personas.",
+      "Mi misión es construir soluciones digitales robustas y seguras, combinando creatividad técnica con las mejores prácticas de ciberseguridad. Destaco por mi capacidad para resolver problemas complejos, optimizar sistemas e integrar inteligencia artificial para mejorar la eficiencia y la seguridad."
+    ],
+    "quick_facts": [
+      "Ing. Seguridad Informática",
+      "Fundador SPIKEDTECH",
+      "Apasionado por la Tech",
+      "Desarrollador Full Stack",
+      "Diseñador de Soluciones"
+    ],
+    "highlights": [
+      { "title": "Código Limpio", "description": "Escribir código limpio, mantenible y escalable siguiendo las mejores prácticas." },
+      { "title": "Resolución de Problemas", "description": "Resolver desafíos complejos con soluciones eficientes y elegantes." },
+      { "title": "Aprendizaje Rápido", "description": "Adaptarme rápidamente a nuevas herramientas y frameworks con facilidad." }
+    ],
+    "values_title": "Mis Valores",
+    "values": [
+      { "title": "Seguridad Primero", "description": "La seguridad es la base que garantiza un entorno de trabajo confiable y resistente." },
+      { "title": "Innovación", "description": "Siempre en busca de soluciones creativas y mejoras continuas." },
+      { "title": "Colaboración", "description": "Trabajo en equipo para lograr resultados sólidos y sostenibles." }
+    ]
+  },
+  "skills": {
+    "title": "Mis Habilidades",
+    "description": "Tecnologías y herramientas con las que trabajo",
+    "no_results": "No se encontraron habilidades en esta categoría"
+  },
+  "categories": {
+    "all": "Todas",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Base de datos",
+    "tools": "Herramientas",
+    "other": "Otro"
+  },
+  "experience": {
+    "title_pre": "Mi",
+    "title_highlight": "Experiencia",
+    "subtitle": "El camino que me ha llevado hasta aquí",
+    "responsibilities": "Responsabilidades / Logros:",
+    "visit_site": "Visitar Sitio",
+    "items": [
+      {
+        "company": "NETCOM – Instituto Costarricense de Acueductos y Alcantarillados (AyA)",
+        "position": "Agente Telefónico – Atención al Cliente (Contrato Indefinido)",
+        "period": "13/01/2025 – Actualidad",
+        "description": "Especialista en atención al cliente telefónica, brindando soporte en gestiones relacionadas con facturación, órdenes de servicio, consultas generales y atención a múltiples sedes del AyA, garantizando un servicio eficiente, empático y orientado al usuario.",
+        "achievements": [
+          "Manejo de procesos CRM y sistemas OPEN enfocados en facturación y detección de anomalías",
+          "Atención y resolución de consultas relacionadas con facturación y órdenes de servicio",
+          "Coordinación y seguimiento de solicitudes con diferentes sedes a nivel nacional",
+          "Apoyo operativo y cobertura de personal en distintas sedes cuando requerido"
+        ]
+      },
+      {
+        "company": "Asamblea Legislativa de Costa Rica",
+        "position": "Técnico de Soporte TI – Práctica Profesional 320 horas",
+        "period": "Octubre 2024 – Diciembre 2024",
+        "description": "Encargado del mantenimiento y soporte técnico de la infraestructura informática institucional, incluyendo gestión y mantenimiento de servidores críticos.",
+        "achievements": [
+          "Actualización de drivers y mantenimiento de equipos",
+          "Inventarios de hardware y software",
+          "Diagnóstico y resolución de problemas en hardware y software",
+          "Gestión de redes institucionales y asistencia a usuarios"
+        ]
+      },
+      {
+        "company": "Municipalidad de Atenas",
+        "position": "Técnico de Soporte TI – Pasantía 90 horas",
+        "period": "Agosto 2023",
+        "description": "Cargo en el Departamento de Soporte, especializado en infraestructura de redes y soporte técnico general.",
+        "achievements": [
+          "Soporte al usuario y resolución de incidencias",
+          "Mantenimiento de hardware en computadoras de escritorio y laptops",
+          "Actualización de sistemas operativos y drivers",
+          "Configuración y mantenimiento de redes"
+        ]
+      },
+      {
+        "company": "SPIKEDTECH",
+        "position": "Fundador & CEO – Empresa Personal de Soporte Técnico",
+        "period": "20/02/2022 – Actualidad",
+        "description": "Fundé SPIKEDTECH como empresa especializada en soluciones tecnológicas integrales, estableciendo un referente en el mercado tecnológico costarricense.",
+        "achievements": [
+          "20+ Clientes satisfechos",
+          "50+ Proyectos completados",
+          "+3 Años de crecimiento sostenido",
+          "Servicios: mantenimiento preventivo/correctivo, redes, consultoría en ciberseguridad, desarrollo de software (C#, .NET, Python, JavaScript), diseño web y producción de videos"
+        ],
+        "link": "https://spikedtech.com"
+      },
+      {
+        "company": "F1 in Schools – Equipo TASC",
+        "position": "Desarrollador Web – Proyecto Internacional",
+        "period": "2022",
+        "description": "Diseñé y desarrollé la página web del equipo TASC para la competencia internacional F1 in Schools, aplicando tecnologías modernas y principios de diseño UI/UX.",
+        "achievements": [
+          "Creación de página web funcional y atractiva (~25 horas de desarrollo)",
+          "Aplicación de principios de diseño y experiencia de usuario",
+          "Representación del equipo a nivel internacional"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title_pre": "Mis",
+    "title_highlight": "Proyectos",
+    "subtitle": "Soluciones innovadoras que transforman ideas en realidad",
+    "filter": "Filtrar:",
+    "all": "Todos",
+    "no_results": "No se encontraron proyectos en esta categoría",
+    "status_published": "Publicado",
+    "status_wip": "En Proceso",
+    "items": [
+      {
+        "title": "Panel de Registros - App Web",
+        "description": "Aplicación web en .NET para registro y gestión de trabajos, con conexión SQL Server y documentación Swagger.",
+        "category": "Web",
+        "status": "published",
+        "image": "/projects/net.png",
+        "technologies": ["C#", ".NET Core", "SQL Server", "Swagger"],
+        "highlights": ["Registro de Trabajos", "Conexión SQL Server", "Consultas Dinámicas"],
+        "github": "#",
+        "demo": "#"
+      },
+      {
+        "title": "SPIKEDTECH Website",
+        "description": "Sitio web corporativo para SPIKEDTECH con diseño responsivo y formulario de contacto.",
+        "category": "Web",
+        "status": "published",
+        "image": "/projects/spikedtech.png",
+        "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap"],
+        "highlights": ["Sitio Corporativo", "Diseño Responsive", "Formulario Contacto"],
+        "github": "#",
+        "demo": "#"
+      },
+      {
+        "title": "Proceso de Automatización",
+        "description": "Scripts Python para automatización de validaciones de datos, envío de correos, optimización de flujos en Excel y generación de reportes con imágenes.",
+        "category": "APIs / Backend",
+        "status": "wip",
+        "image": "/projects/automatizacion.png",
+        "technologies": ["Python", "PowerShell", "Excel / Sheets", "APIs"],
+        "highlights": ["Automatización Total", "Programación de Tareas", "Reportes Automáticos"],
+        "github": "#",
+        "demo": "#"
+      },
+      {
+        "title": "Revista Digital de Ciberseguridad",
+        "description": "Publicación digital universitaria desarrollada con HTML, CSS y JavaScript, orientada a la divulgación de temas de ciberseguridad.",
+        "category": "Seguridad",
+        "status": "published",
+        "image": "/projects/ciberdefensa.jpeg",
+        "technologies": ["HTML5", "CSS3", "JavaScript"],
+        "highlights": ["Ciberseguridad", "Proyecto Universitario"],
+        "github": "#",
+        "demo": "#"
+      },
+      {
+        "title": "Centro de Aprendizaje React",
+        "description": "Aplicación desarrollada con React.js para gestión y seguimiento de cursos realizados, con control de progreso de aprendizaje personal.",
+        "category": "Web",
+        "status": "published",
+        "image": "/projects/image.png",
+        "technologies": ["React.js", "CSS3", "JavaScript"],
+        "highlights": ["React.js", "Seguimiento de Cursos", "Control de Progreso"],
+        "github": "#",
+        "demo": "#"
+      }
+    ]
+  },
+  "education": {
+    "title_pre": "Mi",
+    "title_highlight": "Educación",
+    "title_suffix": "& Certificaciones",
+    "subtitle": "Formación académica y certificaciones profesionales",
+    "education_label": "Educación",
+    "certifications_label": "Certificaciones",
+    "continuous_learning_title": "Aprendizaje Continuo",
+    "continuous_learning_text": "Apasionado por la formación continua, tomando cursos y certificaciones para actualizarme en las últimas tecnologías y prácticas de ciberseguridad y desarrollo web.",
+    "degrees": [
+      {
+        "degree": "Bachillerato en Ingeniería en Seguridad Informática",
+        "school": "Universidad Fidélitas",
+        "period": "2025 – En Curso",
+        "location": "Costa Rica",
+        "description": "Carrera universitaria enfocada en ciberseguridad, análisis de amenazas, criptografía, redes seguras y gestión de incidentes.",
+        "achievements": ["Ciberseguridad", "Redes", "Criptografía", "Gestión de Incidentes"]
+      },
+      {
+        "degree": "Bachiller en Educación General Básica & Técnico Medio en Desarrollo Web",
+        "school": "Colegio Técnico Profesional de Atenas",
+        "period": "2024 – Completado",
+        "location": "Atenas, Costa Rica",
+        "description": "Doble titulación: Bachillerato en educación secundaria y Técnico Medio especializado en Desarrollo Web, con formación en HTML, CSS, JavaScript, bases de datos y programación.",
+        "achievements": ["HTML / CSS", "JavaScript", "Bases de Datos", "Diseño Web"]
+      },
+      {
+        "degree": "Conclusión y obtención de títulos académicos",
+        "school": "Universidad Técnica Nacional – Atenas",
+        "period": "2022 – Completado",
+        "location": "Atenas, Costa Rica",
+        "description": "Formación técnica y académica en áreas de tecnología.",
+        "achievements": ["Tecnología", "Formación Técnica"]
+      }
+    ],
+    "certs": [
+      {
+        "name": "Programa de Ciberseguridad – IBM SkillsBuild",
+        "issuer": "IBM SkillsBuild",
+        "year": "2025 – 2026 (71% completado)"
+      },
+      {
+        "name": "Python Essentials 2",
+        "issuer": "Cisco Systems",
+        "year": "40 horas"
+      },
+      {
+        "name": "CCNA: Introduction to Networks",
+        "issuer": "Cisco Systems",
+        "year": "120 horas"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Listo para comenzar tu proyecto? Conectemos y creemos algo increíble juntos.",
+    "send_message": "Envíame un mensaje",
+    "share_details": "Comparte los detalles de tu proyecto",
+    "channels_note": "Atiendo consultas únicamente por correo electrónico, Discord, LinkedIn o GitHub.",
+    "email_label": "Correo",
+    "location_label": "Ubicación",
+    "location_value": "Alajuela, CR",
+    "response_title": "Tiempo de respuesta",
+    "response_text": "Normalmente respondo dentro de 24-48 horas en días hábiles. ¡Espero tu mensaje!",
+    "form_name": "Nombre *",
+    "form_name_placeholder": "Tu nombre",
+    "form_email": "Correo *",
+    "form_email_placeholder": "tu.email@ejemplo.com",
+    "form_subject": "Asunto *",
+    "form_subject_placeholder": "¿De qué se trata?",
+    "form_message": "Mensaje *",
+    "form_message_placeholder": "Cuéntame sobre tu proyecto...",
+    "success_message": "¡Mensaje enviado con éxito! Me pondré en contacto pronto.",
+    "error_message": "Hubo un error al enviar el mensaje. Intentá de nuevo o escribime directamente a jqchaves1928@gmail.com",
+    "btn_sending": "Enviando...",
+    "btn_send": "Enviar Mensaje"
+  },
+  "footer": {
+    "links_title": "Enlaces",
+    "connect_title": "Conectar",
+    "description": "Estudiante de Ingeniería en Seguridad Informática y Desarrollador Full Stack. Especialista en Ciberseguridad, Fundador de SPIKEDTECH y Consultor Tecnológico.",
+    "rights": "Todos los Derechos Reservados."
+  },
+  "toggle": {
+    "language": "Idioma"
+  }
+}
