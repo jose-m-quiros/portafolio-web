@@ -31,20 +31,35 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+
+    if (!accessKey) {
+      console.error('WEB3FORMS_KEY is missing! Value:', accessKey);
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
+      const payload = {
+        access_key: accessKey,
+        from_name: formData.name,
+        email: formData.email,
+        subject: `[Portafolio] ${formData.subject}`,
+        message: formData.message,
+      };
+
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-          from_name: formData.name,
-          email: formData.email,
-          subject: `[Portafolio] ${formData.subject}`,
-          message: formData.message,
-        }),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(payload),
       });
 
       const result = await response.json();
+      console.log('Web3Forms response:', response.status, result);
 
       if (result.success) {
         setSubmitStatus('success');
