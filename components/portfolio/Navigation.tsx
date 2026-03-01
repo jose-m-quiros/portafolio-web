@@ -40,6 +40,11 @@ export default function Navigation() {
       window.requestAnimationFrame(() => {
         setScrolled(window.scrollY > 20);
 
+        if (window.innerWidth < 768) {
+          ticking = false;
+          return;
+        }
+
         let current = 'home';
         for (const id of sectionIds) {
           const el = document.getElementById(id);
@@ -134,8 +139,11 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-secondary smooth-transition"
+            onPointerDown={(event) => {
+              event.preventDefault();
+              setIsOpen((prev) => !prev);
+            }}
+            className="md:hidden p-2 rounded-lg hover:bg-secondary transition-colors duration-150"
             aria-label="Toggle menu"
           >
             {isOpen ? (
@@ -149,7 +157,7 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden fixed left-0 right-0 bottom-0 top-16 z-[70] bg-background transition-opacity duration-150 ${
+        className={`md:hidden fixed left-0 right-0 bottom-0 top-16 z-[70] bg-background transition-opacity duration-100 ${
           isOpen ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none'
         }`}
       >

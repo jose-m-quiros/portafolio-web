@@ -24,13 +24,21 @@ export default function ScrollReveal({
   children,
   direction = 'up',
   delay = 0,
-  duration = 600,
+  duration = 420,
   className = '',
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (prefersReducedMotion) {
+      setVisible(true);
+      return;
+    }
+
     const el = ref.current;
     if (!el) return;
 
@@ -41,7 +49,10 @@ export default function ScrollReveal({
           observer.unobserve(el);
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+      {
+        threshold: isMobile ? 0.02 : 0.08,
+        rootMargin: isMobile ? '0px 0px -8% 0px' : '0px 0px -12% 0px',
+      }
     );
 
     observer.observe(el);
