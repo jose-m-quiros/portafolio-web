@@ -65,7 +65,7 @@ export default function Hero() {
             </span>
             <br />
             <span className="gradient-text text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-              Jose M Quiros
+              Jose Manuel Quiros
             </span>
           </h1>
 

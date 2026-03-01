@@ -91,15 +91,15 @@ export default function Education() {
               {certs.map((cert, index) => (
                 <div
                   key={index}
-                  className="bg-card p-6 rounded-xl border shadow-sm hover:shadow-md smooth-transition"
+                  className="bg-card p-4 sm:p-6 rounded-xl border shadow-sm hover:shadow-md smooth-transition"
                 >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <h4 className="font-bold mb-1">{cert.name}</h4>
-                      <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-bold mb-1 text-sm sm:text-base break-words">{cert.name}</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground">{cert.issuer}</p>
                     </div>
-                    <div className="flex-shrink-0">
-                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                    <div className="flex-shrink-0 self-start">
+                      <span className="inline-flex items-center px-2.5 sm:px-3 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-medium whitespace-nowrap">
                         {cert.year}
                       </span>
                     </div>

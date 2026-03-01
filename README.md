@@ -1,175 +1,117 @@
-# Next.js 13+ Portfolio with App Router
+PORTAFOLIO PROFESIONAL - JOSE M QUIROS
+Repositorio de Presentación Profesional
 
-A modern, professional portfolio website built with Next.js 13+, TypeScript, and Tailwind CSS, featuring optimal performance through Server and Client Component separation.
+DESCRIPCION GENERAL
 
-## Quick Start
+Este repositorio contiene el código fuente de mi portafolio profesional.
+Fue desarrollado como una carta de presentación digital para oportunidades laborales, colaboración profesional y demostración de habilidades técnicas.
 
-```bash
-# Install dependencies
-npm install
+El objetivo principal del proyecto es mostrar experiencia en las siguientes áreas:
 
-# Start development server
-npm run dev
+Ciberseguridad
+Desarrollo Web Full Stack
+Automatización de Procesos
+Diseño de soluciones tecnológicas seguras y eficientes
 
-# Open http://localhost:3000
-```
+SOBRE EL AUTOR
 
-## Features
+Nombre: Jose M Quiros
+Formación: Estudiante de Ingeniería en Seguridad Informática
+Perfil: Desarrollador Full Stack y Consultor Tecnológico
+Fundador de SPIKEDTECH
 
-- **9 Complete Sections**: Hero, About, Skills, Experience, Projects, Education, Contact, Footer, Navigation
-- **Server/Client Optimization**: 5 Server Components for zero JS, 4 Client Components for interactivity
-- **Fully Responsive**: Mobile-first design with smooth animations
-- **SEO Optimized**: Complete metadata, Open Graph, Twitter Cards
-- **TypeScript**: Type-safe code throughout
-- **Accessible**: WCAG 2.1 compliant with semantic HTML
-- **Performance**: 90+ Lighthouse scores expected
+Soy un profesional enfocado en crear soluciones digitales que no solo funcionen correctamente, sino que también sean seguras, escalables y mantenibles.
 
-## Project Structure
+PROPOSITO DEL REPOSITORIO
 
-```
-project/
-├── app/
-│   ├── layout.tsx          # Root layout with SEO metadata
-│   ├── page.tsx            # Main page (Server Component)
-│   └── globals.css         # Global styles & animations
-├── components/
-│   └── portfolio/          # 9 portfolio components
-│       ├── Navigation.tsx  # Client - Mobile menu
-│       ├── Hero.tsx        # Client - Typewriter effect
-│       ├── About.tsx       # Server - Static content
-│       ├── Skills.tsx      # Client - Filterable
-│       ├── Experience.tsx  # Server - Timeline
-│       ├── Projects.tsx    # Client - Filterable
-│       ├── Education.tsx   # Server - Timeline
-│       ├── Contact.tsx     # Client - Form
-│       └── Footer.tsx      # Server - Links
-└── Documentation/
-    ├── QUICK_START.md
-    ├── PORTFOLIO_README.md
-    ├── CUSTOMIZATION_GUIDE.md
-    └── COMPONENT_SUMMARY.md
-```
+Este proyecto tiene fines laborales y académicos.
 
-## Component Types
+Fines laborales:
 
-### Server Components (5)
-- About, Experience, Education, Footer, page.tsx
-- Zero JavaScript to client
-- Better SEO and performance
-- Static content
+Presentación ante empresas
+Apoyo en procesos de reclutamiento
+Evidencia de experiencia práctica
+Demostración de proyectos desarrollados
 
-### Client Components (4)
-- Navigation, Hero, Skills, Projects, Contact
-- Interactive features only
-- State management
-- Event handlers
+Fines académicos:
 
-## Technology Stack
+Aplicación práctica de conocimientos adquiridos
+Uso de herramientas modernas de desarrollo
+Implementación de buenas prácticas
+Refuerzo de conceptos de seguridad informática
 
-- **Framework**: Next.js 13.5.1 (App Router)
-- **Language**: TypeScript 5.2.2
-- **Styling**: Tailwind CSS 3.3.3
-- **Icons**: Lucide React
-- **UI Components**: Shadcn UI
-- **Fonts**: Google Fonts (Inter + Poppins)
+TECNOLOGIAS UTILIZADAS
 
-## Key Features by Section
+Frontend:
 
-### Navigation
-- Sticky header with scroll effect
-- Mobile hamburger menu
-- Smooth scroll navigation
+HTML5
+CSS3
+JavaScript
+React
+Next.js
+TypeScript
+Tailwind CSS
 
-### Hero
-- Typewriter effect (4 rotating roles)
-- Animated gradient background
-- Social media links
-- CTA buttons
+Backend y Lenguajes:
 
-### Skills
-- 6 category filters
-- 22 skills with progress bars
-- Animated on filter change
+C#
+.NET Core
+Python
+Java
+SQL Server
 
-### Projects
-- 5 category filters
-- 6 sample projects
-- GitHub and demo links
-- Technology badges
+Herramientas:
 
-### Contact
-- Working contact form
-- Form validation
-- Success/error states
-- Contact information cards
+Git
+GitHub
+Swagger
+Excel
+PowerShell
 
-## Customization
+CONTENIDO DEL PORTAFOLIO
 
-All content is easily customizable. See `CUSTOMIZATION_GUIDE.md` for detailed instructions.
+El sitio incluye:
 
-Quick customizations:
-1. **Personal Info**: Update name, email, social links
-2. **Colors**: Modify CSS variables in `globals.css`
-3. **Content**: Edit arrays in component files
-4. **Fonts**: Change in `app/layout.tsx`
+Información profesional
+Experiencia laboral
+Proyectos desarrollados
+Formación académica
+Certificaciones
+Información de contacto
 
-## Commands
+Proyectos destacados:
 
-```bash
-npm run dev        # Development server
-npm run build      # Production build
-npm start          # Run production build
-npm run lint       # Run ESLint
-npm run typecheck  # TypeScript check
-```
+Panel de Registros desarrollado en C# y .NET con SQL Server
+Proceso de Automatización con Python
+Sitio Corporativo SPIKEDTECH
+Revista Digital de Ciberseguridad
+Centro de Aprendizaje desarrollado en React
 
-## Deployment
+OBJETIVO PROFESIONAL
 
-Ready to deploy to:
-- **Vercel** (Recommended)
-- **Netlify** (Configured)
-- **AWS Amplify**
-- **Cloudflare Pages**
+Este portafolio refleja mi compromiso con:
 
-### Deploy to Vercel
-```bash
-vercel --prod
-```
+Seguridad como prioridad
+Código limpio y mantenible
+Aprendizaje continuo
+Soluciones eficientes y escalables
 
-## Performance
+Áreas de interés profesional:
 
-- **Server Components**: Zero JS for static content
-- **Client Bundle**: ~10-12 KB (minified + gzipped)
-- **Total Bundle**: ~25-35 KB
-- **Lighthouse Scores**: 90-100 (all metrics)
+Ciberseguridad
+Desarrollo Web
+Automatización
+Soporte TI
+Consultoría tecnológica
 
-## Documentation
+CONTACTO
 
-- **QUICK_START.md** - 5-minute setup guide
-- **PORTFOLIO_README.md** - Complete documentation
-- **CUSTOMIZATION_GUIDE.md** - Step-by-step customization
-- **COMPONENT_SUMMARY.md** - Architecture details
-- **PROJECT_STRUCTURE.txt** - Visual file tree
+Correo: jqchaves1928@gmail.com
 
-## Browser Support
+Ubicación: Costa Rica
+Tiempo de respuesta estimado: 24 a 48 horas en días hábiles
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+LICENCIA
 
-## License
-
-MIT License - Feel free to use for your own portfolio.
-
-## Credits
-
-Built with Next.js, React, TypeScript, Tailwind CSS, and Shadcn UI.
-
----
-
-**Need help?** Check the documentation files for detailed guides and examples.
-
-**Ready to customize?** Start with `QUICK_START.md` for a 5-minute setup.
-
-**Want to deploy?** Follow the deployment section above or see `PORTFOLIO_README.md`.
+Este repositorio es de uso profesional y demostrativo.
+No está autorizado el uso comercial del contenido sin consentimiento del autor.

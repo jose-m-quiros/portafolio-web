@@ -53,7 +53,7 @@ export default function Footer() {
                 href="#home"
                 className="text-2xl font-bold gradient-text hover:opacity-80 transition-opacity inline-block mb-4"
               >
-                Jose M Quiros
+                Jose Manuel Quiros
               </Link>
               <p className="text-muted-foreground text-sm">
                 {t('footer.description')}
@@ -111,7 +111,7 @@ export default function Footer() {
           {/* Bottom section */}
           <div className="flex justify-center items-center">
             <p className="text-sm text-muted-foreground text-center">
-              © {currentYear} Jose M Quiros, {t('footer.rights')}
+              © {currentYear} Jose Manuel Quiros, {t('footer.rights')}
             </p>
           </div>
         </div>

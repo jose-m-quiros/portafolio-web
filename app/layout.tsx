@@ -17,30 +17,30 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Jose M Quiros - Portafolio',
+  title: 'Jose Manuel Quiros - Portafolio',
   description: 'Estudiante de Ingeniería en Seguridad Informática y Desarrollador Full Stack. Especialista en Ciberseguridad, Fundador de SPIKEDTECH y Consultor Tecnológico.',
   keywords: ['Full Stack Developer', 'Ciberseguridad', 'React', 'Next.js', 'SPIKEDTECH', 'Portfolio'],
-  authors: [{ name: 'Jose M Quiros' }],
-  creator: 'Jose M Quiros',
+  authors: [{ name: 'Jose Manuel Quiros' }],
+  creator: 'Jose Manuel Quiros',
   openGraph: {
     type: 'website',
     locale: 'es_CR',
     url: 'https://josemquiros.dev',
-    title: 'Jose M Quiros - Portafolio',
+    title: 'Jose Manuel Quiros - Portafolio',
     description: 'Estudiante de Ingeniería en Seguridad Informática y Desarrollador Full Stack.',
-    siteName: 'Jose M Quiros Portafolio',
+    siteName: 'Jose Manuel Quiros Portafolio',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Jose M Quiros - Portafolio',
+        alt: 'Jose Manuel Quiros - Portafolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jose M Quiros - Portafolio',
+    title: 'Jose Manuel Quiros - Portafolio',
     description: 'Estudiante de Ingeniería en Seguridad Informática y Desarrollador Full Stack.',
     creator: '@josemquiros',
     images: ['/og-image.png'],
@@ -79,7 +79,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
-              name: 'Jose M Quiros',
+              name: 'Jose Manuel Quiros',
               jobTitle: 'Cybersecurity Engineering Student & Full Stack Developer',
               url: 'https://josemquiros.dev',
               email: 'jqchaves1928@gmail.com',
